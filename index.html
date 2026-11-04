@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="hu" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdvenTower</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏰</text></svg>">
+    <!-- Tailwind CSS (előre lefordítva, nem kell hozzá CDN) -->
+    <style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Inter,system-ui,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.-bottom-10{bottom:-2.5rem}.-right-10{right:-2.5rem}.bottom-4{bottom:1rem}.left-1{left:.25rem}.left-3{left:.75rem}.left-4{left:1rem}.right-4{right:1rem}.top-0{top:0}.top-3{top:.75rem}.top-4{top:1rem}.z-0{z-index:0}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:.25rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-1{margin-left:.25rem}.mr-1{margin-right:.25rem}.mr-2{margin-right:.5rem}.mt-1{margin-top:.25rem}.mt-16{margin-top:4rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-16{height:4rem}.h-20{height:5rem}.h-28{height:7rem}.h-48{height:12rem}.h-64{height:16rem}.h-8{height:2rem}.h-full{height:100%}.max-h-\[420px\]{max-height:420px}.min-h-screen{min-height:100vh}.w-0{width:0}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-16{width:4rem}.w-5{width:1.25rem}.w-8{width:2rem}.w-\[calc\(100\%-2\.5rem\)\]{width:calc(100% - 2.5rem)}.w-full{width:100%}.w-max{width:-moz-max-content;width:max-content}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-7xl{max-width:80rem}.max-w-lg{max-width:32rem}.max-w-xl{max-width:36rem}.flex-shrink-0,.shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.-translate-x-1{--tw-translate-x:-0.25rem}.-translate-x-1,.translate-x-1{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-x-1{--tw-translate-x:0.25rem}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-1>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(.25rem*var(--tw-space-x-reverse));margin-left:calc(.25rem*(1 - var(--tw-space-x-reverse)))}.space-x-2>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(.5rem*var(--tw-space-x-reverse));margin-left:calc(.5rem*(1 - var(--tw-space-x-reverse)))}.space-x-3>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(.75rem*var(--tw-space-x-reverse));margin-left:calc(.75rem*(1 - var(--tw-space-x-reverse)))}.space-x-4>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem*var(--tw-space-x-reverse));margin-left:calc(1rem*(1 - var(--tw-space-x-reverse)))}.space-x-5>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.25rem*var(--tw-space-x-reverse));margin-left:calc(1.25rem*(1 - var(--tw-space-x-reverse)))}.space-x-6>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem*var(--tw-space-x-reverse));margin-left:calc(1.5rem*(1 - var(--tw-space-x-reverse)))}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.space-y-8>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.whitespace-nowrap{white-space:nowrap}.whitespace-pre-wrap{white-space:pre-wrap}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-\[6px\]{border-radius:6px}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-l-2{border-left-width:2px}.border-t{border-top-width:1px}.border-brand-gold{--tw-border-opacity:1;border-color:rgb(212 175 55/var(--tw-border-opacity,1))}.border-brand-gold\/10{border-color:rgba(212,175,55,.1)}.border-brand-gold\/20{border-color:rgba(212,175,55,.2)}.border-brand-gold\/30{border-color:rgba(212,175,55,.3)}.border-emerald-500{--tw-border-opacity:1;border-color:rgb(16 185 129/var(--tw-border-opacity,1))}.border-emerald-500\/30{border-color:rgba(16,185,129,.3)}.border-emerald-500\/40{border-color:rgba(16,185,129,.4)}.border-emerald-500\/50{border-color:rgba(16,185,129,.5)}.border-emerald-800{--tw-border-opacity:1;border-color:rgb(6 95 70/var(--tw-border-opacity,1))}.border-emerald-900{--tw-border-opacity:1;border-color:rgb(6 78 59/var(--tw-border-opacity,1))}.border-emerald-900\/30{border-color:rgba(6,78,59,.3)}.border-emerald-900\/50{border-color:rgba(6,78,59,.5)}.border-emerald-950{--tw-border-opacity:1;border-color:rgb(2 44 34/var(--tw-border-opacity,1))}.border-gray-600{--tw-border-opacity:1;border-color:rgb(75 85 99/var(--tw-border-opacity,1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81/var(--tw-border-opacity,1))}.border-gray-800{--tw-border-opacity:1;border-color:rgb(31 41 55/var(--tw-border-opacity,1))}.border-gray-800\/50{border-color:rgba(31,41,55,.5)}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241/var(--tw-border-opacity,1))}.border-indigo-500\/40{border-color:rgba(99,102,241,.4)}.border-red-300{--tw-border-opacity:1;border-color:rgb(252 165 165/var(--tw-border-opacity,1))}.border-red-400{--tw-border-opacity:1;border-color:rgb(248 113 113/var(--tw-border-opacity,1))}.border-red-400\/30{border-color:hsla(0,91%,71%,.3)}.border-red-500{--tw-border-opacity:1;border-color:rgb(239 68 68/var(--tw-border-opacity,1))}.border-red-500\/30{border-color:rgba(239,68,68,.3)}.border-red-500\/40{border-color:rgba(239,68,68,.4)}.border-red-600{--tw-border-opacity:1;border-color:rgb(220 38 38/var(--tw-border-opacity,1))}.border-red-600\/70{border-color:rgba(220,38,38,.7)}.border-red-700{--tw-border-opacity:1;border-color:rgb(185 28 28/var(--tw-border-opacity,1))}.border-red-800{--tw-border-opacity:1;border-color:rgb(153 27 27/var(--tw-border-opacity,1))}.border-red-800\/60{border-color:rgba(153,27,27,.6)}.border-red-900{--tw-border-opacity:1;border-color:rgb(127 29 29/var(--tw-border-opacity,1))}.border-red-900\/30{border-color:rgba(127,29,29,.3)}.border-red-900\/40{border-color:rgba(127,29,29,.4)}.border-red-900\/60{border-color:rgba(127,29,29,.6)}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0/var(--tw-bg-opacity,1))}.bg-black\/40{background-color:rgba(0,0,0,.4)}.bg-black\/60{background-color:rgba(0,0,0,.6)}.bg-black\/80{background-color:rgba(0,0,0,.8)}.bg-brand-card{--tw-bg-opacity:1;background-color:rgb(18 23 33/var(--tw-bg-opacity,1))}.bg-brand-dark{--tw-bg-opacity:1;background-color:rgb(10 13 18/var(--tw-bg-opacity,1))}.bg-brand-gold{--tw-bg-opacity:1;background-color:rgb(212 175 55/var(--tw-bg-opacity,1))}.bg-brand-gold\/10{background-color:rgba(212,175,55,.1)}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105/var(--tw-bg-opacity,1))}.bg-emerald-900{--tw-bg-opacity:1;background-color:rgb(6 78 59/var(--tw-bg-opacity,1))}.bg-emerald-900\/40{background-color:rgba(6,78,59,.4)}.bg-emerald-900\/60{background-color:rgba(6,78,59,.6)}.bg-emerald-900\/90{background-color:rgba(6,78,59,.9)}.bg-emerald-950{--tw-bg-opacity:1;background-color:rgb(2 44 34/var(--tw-bg-opacity,1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity,1))}.bg-indigo-900{--tw-bg-opacity:1;background-color:rgb(49 46 129/var(--tw-bg-opacity,1))}.bg-indigo-900\/60{background-color:rgba(49,46,129,.6)}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38/var(--tw-bg-opacity,1))}.bg-red-800{--tw-bg-opacity:1;background-color:rgb(153 27 27/var(--tw-bg-opacity,1))}.bg-red-900{--tw-bg-opacity:1;background-color:rgb(127 29 29/var(--tw-bg-opacity,1))}.bg-red-900\/40{background-color:rgba(127,29,29,.4)}.bg-red-900\/60{background-color:rgba(127,29,29,.6)}.bg-red-900\/80{background-color:rgba(127,29,29,.8)}.bg-red-900\/90{background-color:rgba(127,29,29,.9)}.bg-red-950{--tw-bg-opacity:1;background-color:rgb(69 10 10/var(--tw-bg-opacity,1))}.bg-zinc-800{--tw-bg-opacity:1;background-color:rgb(39 39 42/var(--tw-bg-opacity,1))}.bg-zinc-900{--tw-bg-opacity:1;background-color:rgb(24 24 27/var(--tw-bg-opacity,1))}.bg-zinc-950{--tw-bg-opacity:1;background-color:rgb(9 9 11/var(--tw-bg-opacity,1))}.bg-\[radial-gradient\(ellipse_at_center\2c _var\(--tw-gradient-stops\)\)\]{background-image:radial-gradient(ellipse at center,var(--tw-gradient-stops))}.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top,var(--tw-gradient-stops))}.from-brand-card{--tw-gradient-from:#121721 var(--tw-gradient-from-position);--tw-gradient-to:rgba(18,23,33,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-brand-dark{--tw-gradient-from:#0a0d12 var(--tw-gradient-from-position);--tw-gradient-to:rgba(10,13,18,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-brand-gold{--tw-gradient-from:#d4af37 var(--tw-gradient-from-position);--tw-gradient-to:rgba(212,175,55,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-brand-green{--tw-gradient-from:#1b4d3e var(--tw-gradient-from-position);--tw-gradient-to:rgba(27,77,62,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-brand-green\/20{--tw-gradient-from:rgba(27,77,62,.2) var(--tw-gradient-from-position);--tw-gradient-to:rgba(27,77,62,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-emerald-800{--tw-gradient-from:#065f46 var(--tw-gradient-from-position);--tw-gradient-to:rgba(6,95,70,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-indigo-950{--tw-gradient-from:#1e1b4b var(--tw-gradient-from-position);--tw-gradient-to:rgba(30,27,75,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-red-700{--tw-gradient-from:#b91c1c var(--tw-gradient-from-position);--tw-gradient-to:rgba(185,28,28,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-red-800{--tw-gradient-from:#991b1b var(--tw-gradient-from-position);--tw-gradient-to:rgba(153,27,27,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-red-950{--tw-gradient-from:#450a0a var(--tw-gradient-from-position);--tw-gradient-to:rgba(69,10,10,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-amber-600{--tw-gradient-to:rgba(217,119,6,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#d97706 var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-brand-card{--tw-gradient-to:rgba(18,23,33,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#121721 var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-brand-card\/80{--tw-gradient-to:rgba(18,23,33,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),rgba(18,23,33,.8) var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-brand-emerald{--tw-gradient-to:rgba(5,150,105,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#059669 var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),transparent var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-zinc-900{--tw-gradient-to:rgba(24,24,27,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#18181b var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-brand-dark{--tw-gradient-to:#0a0d12 var(--tw-gradient-to-position)}.to-brand-gold{--tw-gradient-to:#d4af37 var(--tw-gradient-to-position)}.to-brand-green{--tw-gradient-to:#1b4d3e var(--tw-gradient-to-position)}.to-indigo-900{--tw-gradient-to:#312e81 var(--tw-gradient-to-position)}.to-red-900{--tw-gradient-to:#7f1d1d var(--tw-gradient-to-position)}.to-red-950{--tw-gradient-to:#450a0a var(--tw-gradient-to-position)}.to-teal-900{--tw-gradient-to:#134e4a var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.object-cover{-o-object-fit:cover;object-fit:cover}.p-1{padding:.25rem}.p-2{padding:.5rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.p-\[2px\]{padding:2px}.px-1{padding-left:.25rem;padding-right:.25rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0{padding-top:0;padding-bottom:0}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-2{padding-bottom:.5rem}.pb-3{padding-bottom:.75rem}.pb-6{padding-bottom:1.5rem}.pl-2{padding-left:.5rem}.pl-6{padding-left:1.5rem}.pt-2{padding-top:.5rem}.pt-4{padding-top:1rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-9xl{font-size:8rem;line-height:1}.text-\[10px\]{font-size:10px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-light{font-weight:300}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-.025em}.tracking-wide{letter-spacing:.025em}.tracking-wider{letter-spacing:.05em}.tracking-widest{letter-spacing:.1em}.text-black{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity,1))}.text-brand-dark{--tw-text-opacity:1;color:rgb(10 13 18/var(--tw-text-opacity,1))}.text-brand-gold{--tw-text-opacity:1;color:rgb(212 175 55/var(--tw-text-opacity,1))}.text-emerald-200{--tw-text-opacity:1;color:rgb(167 243 208/var(--tw-text-opacity,1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183/var(--tw-text-opacity,1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153/var(--tw-text-opacity,1))}.text-emerald-400\/80{color:rgba(52,211,153,.8)}.text-emerald-500{--tw-text-opacity:1;color:rgb(16 185 129/var(--tw-text-opacity,1))}.text-gray-100{--tw-text-opacity:1;color:rgb(243 244 246/var(--tw-text-opacity,1))}.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235/var(--tw-text-opacity,1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219/var(--tw-text-opacity,1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity,1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity,1))}.text-indigo-300{--tw-text-opacity:1;color:rgb(165 180 252/var(--tw-text-opacity,1))}.text-indigo-400{--tw-text-opacity:1;color:rgb(129 140 248/var(--tw-text-opacity,1))}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252/var(--tw-text-opacity,1))}.text-red-200{--tw-text-opacity:1;color:rgb(254 202 202/var(--tw-text-opacity,1))}.text-red-300{--tw-text-opacity:1;color:rgb(252 165 165/var(--tw-text-opacity,1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113/var(--tw-text-opacity,1))}.text-red-400\/80{color:hsla(0,91%,71%,.8)}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68/var(--tw-text-opacity,1))}.text-red-900{--tw-text-opacity:1;color:rgb(127 29 29/var(--tw-text-opacity,1))}.text-red-900\/20{color:rgba(127,29,29,.2)}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.opacity-50{opacity:.5}.opacity-90{opacity:.9}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-2xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgba(0,0,0,.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color)}.shadow-inner,.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-brand-gold{--tw-shadow-color:#d4af37;--tw-shadow:var(--tw-shadow-colored)}.shadow-brand-gold\/10{--tw-shadow-color:rgba(212,175,55,.1);--tw-shadow:var(--tw-shadow-colored)}.shadow-emerald-900{--tw-shadow-color:#064e3b;--tw-shadow:var(--tw-shadow-colored)}.shadow-red-900{--tw-shadow-color:#7f1d1d;--tw-shadow:var(--tw-shadow-colored)}.blur{--tw-blur:blur(8px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px)}.backdrop-blur-md,.backdrop-blur-sm{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px)}.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.duration-500{transition-duration:.5s}.selection\:bg-brand-gold ::-moz-selection{--tw-bg-opacity:1;background-color:rgb(212 175 55/var(--tw-bg-opacity,1))}.selection\:bg-brand-gold ::selection{--tw-bg-opacity:1;background-color:rgb(212 175 55/var(--tw-bg-opacity,1))}.selection\:text-black ::-moz-selection{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity,1))}.selection\:text-black ::selection{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity,1))}.selection\:bg-brand-gold::-moz-selection{--tw-bg-opacity:1;background-color:rgb(212 175 55/var(--tw-bg-opacity,1))}.selection\:bg-brand-gold::selection{--tw-bg-opacity:1;background-color:rgb(212 175 55/var(--tw-bg-opacity,1))}.selection\:text-black::-moz-selection{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity,1))}.selection\:text-black::selection{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity,1))}.before\:absolute:before{content:var(--tw-content);position:absolute}.before\:inset-0:before{content:var(--tw-content);inset:0}.before\:left-4:before{content:var(--tw-content);left:1rem}.before\:-ml-px:before{content:var(--tw-content);margin-left:-1px}.before\:w-0\.5:before{content:var(--tw-content);width:.125rem}.before\:bg-brand-gold\/30:before{content:var(--tw-content);background-color:rgba(212,175,55,.3)}.hover\:border-emerald-500\/50:hover{border-color:rgba(16,185,129,.5)}.hover\:border-emerald-500\/60:hover{border-color:rgba(16,185,129,.6)}.hover\:border-red-500\/50:hover{border-color:rgba(239,68,68,.5)}.hover\:border-red-600\/50:hover{border-color:rgba(220,38,38,.5)}.hover\:bg-brand-card:hover{--tw-bg-opacity:1;background-color:rgb(18 23 33/var(--tw-bg-opacity,1))}.hover\:bg-brand-gold\/10:hover{background-color:rgba(212,175,55,.1)}.hover\:bg-emerald-800:hover{--tw-bg-opacity:1;background-color:rgb(6 95 70/var(--tw-bg-opacity,1))}.hover\:bg-emerald-950\/30:hover{background-color:rgba(2,44,34,.3)}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241/var(--tw-bg-opacity,1))}.hover\:bg-red-500:hover{--tw-bg-opacity:1;background-color:rgb(239 68 68/var(--tw-bg-opacity,1))}.hover\:bg-red-800:hover{--tw-bg-opacity:1;background-color:rgb(153 27 27/var(--tw-bg-opacity,1))}.hover\:bg-red-950\/30:hover{background-color:rgba(69,10,10,.3)}.hover\:bg-zinc-700:hover{--tw-bg-opacity:1;background-color:rgb(63 63 70/var(--tw-bg-opacity,1))}.hover\:from-red-600:hover{--tw-gradient-from:#dc2626 var(--tw-gradient-from-position);--tw-gradient-to:rgba(220,38,38,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.hover\:to-red-800:hover{--tw-gradient-to:#991b1b var(--tw-gradient-to-position)}.hover\:text-brand-gold:hover{--tw-text-opacity:1;color:rgb(212 175 55/var(--tw-text-opacity,1))}.hover\:text-emerald-400:hover{--tw-text-opacity:1;color:rgb(52 211 153/var(--tw-text-opacity,1))}.hover\:text-red-400:hover{--tw-text-opacity:1;color:rgb(248 113 113/var(--tw-text-opacity,1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.hover\:underline:hover{text-decoration-line:underline}.hover\:brightness-110:hover{--tw-brightness:brightness(1.1);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.focus\:border-brand-gold:focus{--tw-border-opacity:1;border-color:rgb(212 175 55/var(--tw-border-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05}.group:hover .group-hover\:scale-105,.group:hover .group-hover\:scale-110{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1}.group:hover .group-hover\:opacity-100{opacity:1}.group:hover .group-hover\:shadow-brand-gold\/30{--tw-shadow-color:rgba(212,175,55,.3);--tw-shadow:var(--tw-shadow-colored)}@media (min-width:640px){.sm\:inline{display:inline}.sm\:w-auto{width:auto}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:p-10{padding:2.5rem}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-6xl{font-size:3.75rem;line-height:1}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width:768px){.md\:order-1{order:1}.md\:col-span-2{grid-column:span 2/span 2}.md\:flex{display:flex}.md\:hidden{display:none}.md\:w-\[calc\(50\%-2\.5rem\)\]{width:calc(50% - 2.5rem)}.md\:w-auto{width:auto}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:justify-normal{justify-content:normal}.md\:before\:left-1\/2:before{content:var(--tw-content);left:50%}.md\:odd\:flex-row-reverse:nth-child(odd){flex-direction:row-reverse}.group:nth-child(odd) .md\:group-odd\:-translate-x-1\/2{--tw-translate-x:-50%}.group:nth-child(2n) .md\:group-even\:translate-x-1\/2,.group:nth-child(odd) .md\:group-odd\:-translate-x-1\/2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:nth-child(2n) .md\:group-even\:translate-x-1\/2{--tw-translate-x:50%}}@media (min-width:1024px){.lg\:col-span-1{grid-column:span 1/span 1}.lg\:col-span-2{grid-column:span 2/span 2}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:space-x-2>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(.5rem*var(--tw-space-x-reverse));margin-left:calc(.5rem*(1 - var(--tw-space-x-reverse)))}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:py-32{padding-top:8rem;padding-bottom:8rem}.lg\:text-7xl{font-size:4.5rem;line-height:1}}</style>
+    <!-- Google Fonts for Cinzel (Optimus Princeps style serif) & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Custom Font Fallback Simulation for Optimus Princeps */
+        @font-face {
+            font-family: 'Optimus Princeps';
+            src: local('Cinzel'), local('Trajan Pro'), local('Georgia');
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0d12;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        .font-brand {
+            font-family: 'Optimus Princeps', 'Cinzel', serif;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF099 0%, #D4AF37 50%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .emerald-gradient-text {
+            background: linear-gradient(135deg, #6EE7B7 0%, #059669 50%, #047857 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border {
+            border-image: linear-gradient(to bottom, #D4AF37, #059669) 1;
+        }
+        .glass-panel {
+            background: rgba(18, 23, 33, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .glass-panel-emerald {
+            background: rgba(10, 25, 20, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(5, 150, 105, 0.3);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0d12;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1b4d3e;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-brand-gold selection:text-black">
+
+    <!-- NAVIGATION HEADER -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-brand-gold/20 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo & Brand Name -->
+                <a href="#home" onclick="navTo('home')" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-brand-gold via-brand-emerald to-brand-green p-[2px] shadow-lg shadow-brand-gold/10 group-hover:shadow-brand-gold/30 transition-all">
+                        <div class="w-full h-full bg-brand-dark rounded-[6px] flex items-center justify-center">
+                            <i class="fa-solid font-brand text-brand-gold text-xl group-hover:scale-110 transition-transform">🏰</i>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-brand text-2xl font-bold tracking-wider gold-gradient-text">AdvenTower</span>
+                        <span class="text-[10px] tracking-widest text-emerald-400 uppercase font-semibold">Game Portal</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+                    <button onclick="navTo('home')" id="nav-home" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-brand-gold transition-colors text-brand-gold font-semibold">
+                        <span data-i18n="nav.home">Főoldal</span>
+                    </button>
+                    <button onclick="launchGameDemo('ejjeli')" id="nav-nightshift" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-red-400 transition-colors flex items-center space-x-1">
+                        <span class="bg-red-900/80 text-red-200 text-[10px] px-1.5 py-0.5 rounded font-bold border border-red-500/30">18+</span>
+                        <span data-i18n="nav.nightshift">Éjjeli Műszak</span>
+                    </button>
+                    <button onclick="launchGameDemo('all')" id="nav-adventuretime" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-emerald-400 transition-colors">
+                        <span data-i18n="nav.adventuretime">AdventureTime</span>
+                    </button>
+                    <button onclick="navTo('feedback')" id="nav-feedback" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-brand-gold transition-colors">
+                        <span data-i18n="nav.feedback">Visszajelzés</span>
+                    </button>
+                    <button onclick="navTo('devlog')" id="nav-devlog" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-brand-gold transition-colors">
+                        <span data-i18n="nav.devlog">Fejlesztési Napló</span>
+                    </button>
+                    <button onclick="navTo('contact')" id="nav-contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-brand-gold transition-colors">
+                        <span data-i18n="nav.contact">Kapcsolat</span>
+                    </button>
+                </nav>
+
+                <!-- Language Toggle & Mobile Menu Switcher -->
+                <div class="flex items-center space-x-4">
+                    <!-- HU / EN Switcher Button -->
+                    <div class="bg-brand-card p-1 rounded-full border border-brand-gold/30 flex items-center shadow-inner">
+                        <button id="lang-hu-btn" onclick="setLanguage('hu')" class="px-3 py-1 rounded-full text-xs font-bold transition-all bg-brand-gold text-brand-dark shadow">
+                            HU
+                        </button>
+                        <button id="lang-en-btn" onclick="setLanguage('en')" class="px-3 py-1 rounded-full text-xs font-bold text-gray-400 hover:text-white transition-all">
+                            EN
+                        </button>
+                    </div>
+
+                    <!-- Mobile menu button -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-brand-card focus:outline-none">
+                        <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Navigation Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-b border-brand-gold/20 px-4 pt-2 pb-6 space-y-2">
+            <button onclick="navTo('home'); toggleMobileMenu()" class="block w-full text-left px-3 py-2.5 rounded-md text-base font-medium text-gray-200 hover:bg-brand-gold/10 hover:text-brand-gold">
+                <i class="fa-solid fa-house mr-2 text-brand-gold"></i> <span data-i18n="nav.home">Főoldal</span>
+            </button>
+            <button onclick="launchGameDemo('ejjeli')" class="block w-full text-left px-3 py-2.5 rounded-md text-base font-medium text-red-300 hover:bg-red-950/30">
+                <i class="fa-solid fa-moon mr-2 text-red-400"></i> <span data-i18n="nav.nightshift">Éjjeli Műszak</span> <span class="bg-red-800 text-white text-xs px-1.5 py-0.5 rounded ml-1 font-bold">18+</span>
+            </button>
+            <button onclick="launchGameDemo('all')" class="block w-full text-left px-3 py-2.5 rounded-md text-base font-medium text-emerald-300 hover:bg-emerald-950/30">
+                <i class="fa-solid fa-dragon mr-2 text-emerald-400"></i> <span data-i18n="nav.adventuretime">AdventureTime</span>
+            </button>
+            <button onclick="navTo('feedback'); toggleMobileMenu()" class="block w-full text-left px-3 py-2.5 rounded-md text-base font-medium text-gray-200 hover:bg-brand-gold/10 hover:text-brand-gold">
+                <i class="fa-solid fa-comments mr-2 text-brand-gold"></i> <span data-i18n="nav.feedback">Visszajelzés</span>
+            </button>
+            <button onclick="navTo('devlog'); toggleMobileMenu()" class="block w-full text-left px-3 py-2.5 rounded-md text-base font-medium text-gray-200 hover:bg-brand-gold/10 hover:text-brand-gold">
+                <i class="fa-solid fa-newspaper mr-2 text-brand-gold"></i> <span data-i18n="nav.devlog">Fejlesztési Napló</span>
+            </button>
+            <button onclick="navTo('contact'); toggleMobileMenu()" class="block w-full text-left px-3 py-2.5 rounded-md text-base font-medium text-gray-200 hover:bg-brand-gold/10 hover:text-brand-gold">
+                <i class="fa-solid fa-envelope mr-2 text-brand-gold"></i> <span data-i18n="nav.contact">Kapcsolat</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA - SINGLE PAGE SECTIONS -->
+    <main class="flex-grow">
+
+        <!-- ==================== 1. HOME SECTION ==================== -->
+        <section id="sec-home" class="page-section">
+            <!-- Hero Banner -->
+            <div class="relative py-20 lg:py-32 overflow-hidden border-b border-brand-gold/10">
+                <!-- Atmospheric background graphics -->
+                <div class="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-card/80 to-brand-dark z-0"></div>
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-green/20 via-transparent to-transparent z-0 pointer-events-none"></div>
+                
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                    <h1 class="font-brand text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6">
+                        <span data-i18n="home.heroTitle">Lépj be az interaktív</span> <br class="hidden sm:inline"/>
+                        <span class="gold-gradient-text">AdvenTower</span> <span data-i18n="home.heroTitleSub">Világába</span>
+                    </h1>
+                    <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-300 font-light leading-relaxed" data-i18n="home.heroDesc">
+                        Sötét noir krimi és izgalmas fantasy kalandok egyetlen felületen. Válaszd ki az utadat, és hozd meg saját döntéseidet!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Dual Showcase Cards -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="text-center mb-12">
+                    <h2 class="font-brand text-3xl font-bold gold-gradient-text mb-3" data-i18n="home.showcaseTitle">Játékaim</h2>
+                    <p class="text-gray-400 max-w-xl mx-auto text-sm" data-i18n="home.showcaseSub">Melyik történetbe veted bele magad ma?</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Game 1: Éjjeli Műszak -->
+                    <div class="glass-panel rounded-2xl overflow-hidden border border-red-900/30 hover:border-red-600/50 transition-all group duration-300 flex flex-col justify-between">
+                        <div onclick="launchGameDemo('ejjeli')" role="button" tabindex="0" class="cursor-pointer relative h-64 overflow-hidden bg-zinc-950 flex items-center justify-center">
+                            <!-- Game Preview Placeholder Image -->
+                            <img src="img/ejjeli-muszak.jpg" alt="Éjjeli Műszak" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent"></div>
+                            <span class="absolute top-4 right-4 bg-red-900/90 text-red-200 border border-red-500/40 text-xs font-bold px-3 py-1 rounded-full shadow-lg backdrop-blur-md flex items-center space-x-1">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <span>18+ MATURE</span>
+                            </span>
+                            <span class="absolute bottom-4 left-4 text-xs font-bold px-2.5 py-1 rounded bg-black/60 text-gray-300 backdrop-blur-sm border border-gray-700">
+                                Interactive Noir Fiction
+                            </span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-brand text-2xl font-bold text-red-400 mb-2 flex items-center justify-between">
+                                    <span class="cursor-pointer" onclick="launchGameDemo('ejjeli')">Éjjeli Műszak</span>
+                                    <span class="text-xs font-normal text-gray-400" data-i18n="home.demoTag">Demó elérhető</span>
+                                </h3>
+                                <p class="text-gray-300 text-sm mb-6 leading-relaxed" data-i18n="home.cardNightshiftDesc">
+                                    Egy sötét, atmoszférikus noir játékkönyv a kilencvenes évek végi Morgan Hills városában. Nyomozz, dönts a Codex szabályai szerint és kezeld a benned lakozó belső hangot (The Host).
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-gray-800 flex items-center justify-between">
+                                <span class="text-xs text-red-400/80 font-semibold uppercase tracking-wider" data-i18n="home.tagMature">Felnőtt Tartalom</span>
+                                <button onclick="launchGameDemo('ejjeli')" class="px-5 py-2.5 rounded-lg bg-red-900/60 hover:bg-red-800 text-white font-semibold text-sm transition-colors border border-red-500/30 flex items-center space-x-1">
+                                    <span data-i18n="home.btnExplore">Játék indítása</span>
+                                    <i class="fa-solid fa-play text-xs"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Game 2: AdventureTime -->
+                    <div class="glass-panel-emerald rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all group duration-300 flex flex-col justify-between">
+                        <div onclick="launchGameDemo('all')" role="button" tabindex="0" class="cursor-pointer relative h-64 overflow-hidden bg-zinc-950 flex items-center justify-center">
+                            <img src="img/adventuretime.jpg" alt="AdventureTime" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent"></div>
+                            <span class="absolute top-4 right-4 bg-emerald-900/90 text-emerald-200 border border-emerald-500/40 text-xs font-bold px-3 py-1 rounded-full shadow-lg backdrop-blur-md">
+                                5 Kaland / Adventures
+                            </span>
+                            <span class="absolute bottom-4 left-4 text-xs font-bold px-2.5 py-1 rounded bg-black/60 text-emerald-300 backdrop-blur-sm border border-emerald-900">
+                                Horror · Cyberpunk · Sci-fi · Paródia
+                            </span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-brand text-2xl font-bold text-emerald-400 mb-2 flex items-center justify-between">
+                                    <span>AdventureTime</span>
+                                    <span class="text-xs font-normal text-gray-400" data-i18n="home.demoTag">Demó elérhető</span>
+                                </h3>
+                                <p class="text-gray-300 text-sm mb-6 leading-relaxed" data-i18n="home.cardAdventureDesc">
+                                    5 egyedi, izgalmas interaktív fejezet és kaland: az elátkozott tornyoktól a cyber-punk labirintusokig. Teszteld a logikádat és a stratégiai döntési képességedet!
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-emerald-950 flex items-center justify-between">
+                                <span class="text-xs text-emerald-400/80 font-semibold uppercase tracking-wider" data-i18n="home.tagPegi">Minden korosztálynak</span>
+                                <button onclick="launchGameDemo('all')" class="px-5 py-2.5 rounded-lg bg-emerald-900/60 hover:bg-emerald-800 text-white font-semibold text-sm transition-colors border border-emerald-500/30 flex items-center space-x-1">
+                                    <span data-i18n="home.btnExplore5">Kalandok indítása</span>
+                                    <i class="fa-solid fa-play text-xs"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 2. ÉJJELI MŰSZAK (NIGHT SHIFT) SECTION ==================== -->
+        <section id="sec-nightshift" class="page-section hidden py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- PROMINENT 18+ AGE GATE WARNING BANNER -->
+                <div class="mb-10 bg-gradient-to-r from-red-950 via-zinc-900 to-red-950 border-2 border-red-600/70 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 text-red-900/20 text-9xl font-bold pointer-events-none select-none font-brand">18+</div>
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+                        <div class="flex items-center space-x-5">
+                            <div class="w-16 h-16 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-2xl shadow-lg flex-shrink-0 border-2 border-red-300">
+                                18+
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-red-200 tracking-wide mb-1 flex items-center gap-2">
+                                    <i class="fa-solid fa-triangle-exclamation text-red-500"></i>
+                                    <span data-i18n="ns.ageWarnTitle">KORHATÁR FIGYELMEZTETÉS - FELNŐTT TARTALOM</span>
+                                </h3>
+                                <p class="text-gray-300 text-sm max-w-2xl leading-relaxed" data-i18n="ns.ageWarnDesc">
+                                    Az Éjjeli Műszak egy sötét hangulatú noir pszichológiai dráma és játékkönyv. Erőszak, bűnügyi témák, feszült morális döntések és felnőtt párbeszédek találhatók benne. Kizárólag 18 éven felüli játékosoknak ajánlott!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-full md:w-auto text-center">
+                            <button onclick="confirmAge()" id="age-confirm-btn" class="w-full md:w-auto px-6 py-3 rounded-lg bg-red-600 hover:bg-red-500 text-white font-bold text-sm shadow-lg transition-all flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-check"></i>
+                                <span data-i18n="ns.btnConfirmAge">Elmúltam 18 éves / Lépj be</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Content Container -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Left Main Column (Details & Story) -->
+                    <div class="lg:col-span-2 space-y-8">
+                        <div class="glass-panel p-8 rounded-2xl border border-red-900/40">
+                            <img src="img/ejjeli-muszak.jpg" alt="Éjjeli Műszak" class="w-full rounded-xl border border-red-900/40 mb-6 object-cover max-h-[420px]">
+                            <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+                                <div>
+                                    <span class="text-xs font-bold text-red-400 uppercase tracking-widest" data-i18n="ns.genre">Pszichológiai Noir / Interaktív Könyv</span>
+                                    <h2 class="font-brand text-4xl font-bold text-white mt-1">Éjjeli Műszak <span class="text-gray-500 text-xl font-normal">(Night Shift)</span></h2>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="px-3 py-1 bg-red-950 text-red-300 border border-red-800/60 rounded-full text-xs font-semibold">1998 October</span>
+                                    <span class="px-3 py-1 bg-zinc-800 text-gray-300 border border-gray-700 rounded-full text-xs font-semibold">Single Player</span>
+                                </div>
+                            </div>
+
+                            <p class="text-gray-300 leading-relaxed mb-6" data-i18n="ns.longDesc">
+                                Morgan Hills városában járunk, 1998 októberében. A rendőrség igazságügyi laborjában dolgozol elemzőként. Nappal kémcsöveket és DNS mintákat vizsgálsz, éjszaka pedig a rejtélyes Codex szabályait követve vadászod a bíróság által felmentett bűnözőket. A helyzetet nehezíti a nyakadon lihegő Ostrander nyomozónő és a fejedben megszólaló sötét belső hang: **The Host**.
+                            </p>
+
+                            <!-- Features list -->
+                            <h4 class="font-bold text-lg text-brand-gold mb-3" data-i18n="ns.featuresTitle">Főbb Jellemzők:</h4>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 text-sm text-gray-300">
+                                <li class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-skull-crossbones text-red-500 w-5"></i>
+                                    <span data-i18n="ns.feat1">Sötét, száraz 90-es évekbeli noir hangulat</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-list-check text-brand-gold w-5"></i>
+                                    <span data-i18n="ns.feat2">A Codex 5 szigorú szabálya</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-brain text-emerald-400 w-5"></i>
+                                    <span data-i18n="ns.feat3">Négy fejleszthető képesség (Megfigyelés stb.)</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-masks-theater text-purple-400 w-5"></i>
+                                    <span data-i18n="ns.feat4">Több mint 125 egyedi jelenet és 6 befejezés</span>
+                                </li>
+                            </ul>
+
+                            <!-- Screenshot Placeholders -->
+                            <h4 class="font-bold text-lg text-brand-gold mb-3" data-i18n="ns.galleryTitle">Képek a Játékból:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+                                <img src="img/em-labor.jpg" class="rounded-lg border border-gray-800 hover:border-red-500/50 transition-all object-cover w-full h-28" alt="A labor">
+                                <img src="img/em-dns.jpg" class="rounded-lg border border-gray-800 hover:border-red-500/50 transition-all object-cover w-full h-28" alt="DNS-adatbázis">
+                                <img src="img/em-bizonyitek.jpg" class="rounded-lg border border-gray-800 hover:border-red-500/50 transition-all object-cover w-full h-28" alt="Bizonyíték">
+                            </div>
+
+                            <!-- Interactive Demo / Launch Box -->
+                            <div class="bg-zinc-950 p-6 rounded-xl border border-red-900/60 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div>
+                                    <h4 class="font-bold text-white text-lg" data-i18n="ns.demoTitle">Játssz a Demóval azonnal!</h4>
+                                    <p class="text-xs text-gray-400" data-i18n="ns.demoSub">A böngésződben azonnal kipróbálható az első fejezet.</p>
+                                </div>
+                                <button onclick="launchGameDemo('ejjeli')" class="w-full sm:w-auto px-6 py-3 rounded-lg bg-gradient-to-r from-red-700 to-red-900 hover:from-red-600 hover:to-red-800 text-white font-bold text-sm shadow-xl transition-all border border-red-400/30 flex items-center justify-center space-x-2">
+                                    <i class="fa-solid fa-play"></i>
+                                    <span data-i18n="ns.btnPlayDemo">Demó Indítása</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Sidebar Stats / Info -->
+                    <div class="space-y-6">
+                        <div class="glass-panel p-6 rounded-2xl border border-brand-gold/20">
+                            <h3 class="font-brand text-xl font-bold text-brand-gold mb-4 border-b border-gray-800 pb-2" data-i18n="ns.specTitle">Játék Adatok</h3>
+                            <div class="space-y-3 text-sm">
+                                <div class="flex justify-between border-b border-gray-800/50 pb-2">
+                                    <span class="text-gray-400" data-i18n="ns.developer">Fejlesztő:</span>
+                                    <span class="font-semibold text-gray-200">AdvenTower Studio</span>
+                                </div>
+                                <div class="flex justify-between border-b border-gray-800/50 pb-2">
+                                    <span class="text-gray-400" data-i18n="ns.platform">Platform:</span>
+                                    <span class="font-semibold text-gray-200">Web / PC / Mobile</span>
+                                </div>
+                                <div class="flex justify-between border-b border-gray-800/50 pb-2">
+                                    <span class="text-gray-400" data-i18n="ns.languages">Nyelvek:</span>
+                                    <span class="font-semibold text-emerald-400">Magyar / English</span>
+                                </div>
+                                <div class="flex justify-between border-b border-gray-800/50 pb-2">
+                                    <span class="text-gray-400" data-i18n="ns.rating">Besorolás:</span>
+                                    <span class="font-bold text-red-500">18+</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-400" data-i18n="ns.status">Státusz:</span>
+                                    <span class="font-semibold text-brand-gold" data-i18n="ns.statusVal">Demó elérhető</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mini Codex Rules Card -->
+                        <div class="bg-zinc-950 p-6 rounded-2xl border border-red-900/40 text-xs text-gray-400 space-y-2">
+                            <h4 class="font-brand text-sm font-bold text-red-400 uppercase tracking-widest mb-3 flex items-center space-x-2">
+                                <i class="fa-solid fa-book"></i>
+                                <span data-i18n="ns.codexTitle">A Kódex szabályai</span>
+                            </h4>
+                            <p class="border-l-2 border-red-700 pl-2" data-i18n="ns.rule1">I. Csak bizonyított bűnös, akit a hatóságok elengedtek.</p>
+                            <p class="border-l-2 border-red-700 pl-2" data-i18n="ns.rule2">II. Soha a szeretteid körében.</p>
+                            <p class="border-l-2 border-red-700 pl-2" data-i18n="ns.rule3">III. Soha ugyanaz a módszer kétszer.</p>
+                            <p class="border-l-2 border-red-700 pl-2" data-i18n="ns.rule4">IV. A hétköznapi élet előbbre való.</p>
+                            <p class="border-l-2 border-red-700 pl-2" data-i18n="ns.rule5">V. Ha kétséged van, hagyd.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 3. ADVENTURETIME SECTION ==================== -->
+        <section id="sec-adventuretime" class="page-section hidden py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="text-center mb-12">
+                    <span class="px-4 py-1.5 rounded-full bg-emerald-950 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-widest">
+                        5 Kaland / 5 Adventures
+                    </span>
+                    <h2 class="font-brand text-4xl font-bold text-white mt-3 mb-4" data-i18n="at.title">AdventureTime Gyűjtemény</h2>
+                    <img src="img/adventuretime.jpg" alt="AdventureTime" class="w-full max-w-5xl mx-auto rounded-2xl border border-emerald-900/50 shadow-2xl mb-6">
+                    <p class="text-gray-300 max-w-2xl mx-auto text-sm leading-relaxed" data-i18n="at.headerDesc">
+                        Fedezd fel az AdvenTower öt különálló, izgalmas fantasy és sci-fi kalandját! Mindegyik történet egyedi kihívásokat, rejtvényeket és elágazó cselekményt kínál.
+                    </p>
+                </div>
+
+                <!-- 5 Adventure Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Adventure 1 -->
+                    <div class="glass-panel-emerald p-6 rounded-2xl border border-emerald-900/50 hover:border-emerald-500/60 transition-all flex flex-col justify-between group">
+                        <div>
+                            <div class="relative h-48 rounded-xl overflow-hidden mb-4 bg-zinc-950">
+                                <img src="img/at-grayhaven.jpg" alt="Grayhaven City" style="object-position:center 30%" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-sm text-emerald-400 border border-emerald-500/30 text-[10px] font-bold px-2.5 py-1 rounded">
+                                    Kaland #1
+                                </span>
+                            </div>
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest" data-i18n="at.g1">Túlélőhorror</span>
+                            <h3 class="font-brand text-xl font-bold text-white mt-1 mb-2" data-i18n="at.t1">Grayhaven City</h3>
+                            <p class="text-gray-300 text-xs leading-relaxed mb-4" data-i18n="at.adv1Desc">
+                                Mássz fel az ősi mágus lezárt tornyába, fejtsd meg a rúnákat és győzd le az emeleteket őrző elementalokat!
+                            </p>
+                        </div>
+                        <button onclick="launchGameDemo('Grayhaven-2.html')" class="w-full py-2.5 rounded-lg bg-emerald-900/60 hover:bg-emerald-800 text-emerald-200 font-semibold text-xs border border-emerald-500/30 transition-all flex items-center justify-center space-x-1">
+                            <i class="fa-solid fa-play text-emerald-400"></i>
+                            <span data-i18n="at.btnPlay">Demó indítása</span>
+                        </button>
+                    </div>
+
+                    <!-- Adventure 2 -->
+                    <div class="glass-panel-emerald p-6 rounded-2xl border border-emerald-900/50 hover:border-emerald-500/60 transition-all flex flex-col justify-between group">
+                        <div>
+                            <div class="relative h-48 rounded-xl overflow-hidden mb-4 bg-zinc-950">
+                                <img src="img/at-rozsdafeny.jpg" alt="Rozsdafény" style="object-position:center 30%" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-sm text-emerald-400 border border-emerald-500/30 text-[10px] font-bold px-2.5 py-1 rounded">
+                                    Kaland #2
+                                </span>
+                            </div>
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest" data-i18n="at.g2">Cyberpunk</span>
+                            <h3 class="font-brand text-xl font-bold text-white mt-1 mb-2" data-i18n="at.t2">Rozsdafény</h3>
+                            <p class="text-gray-300 text-xs leading-relaxed mb-4" data-i18n="at.adv2Desc">
+                                Egy elfeledett katakomba mélyén ébredsz. A fáklyád lassan elalszik... sikerül kijutnod a csapdák közül?
+                            </p>
+                        </div>
+                        <button onclick="launchGameDemo('Rustglow.html')" class="w-full py-2.5 rounded-lg bg-emerald-900/60 hover:bg-emerald-800 text-emerald-200 font-semibold text-xs border border-emerald-500/30 transition-all flex items-center justify-center space-x-1">
+                            <i class="fa-solid fa-play text-emerald-400"></i>
+                            <span data-i18n="at.btnPlay">Demó indítása</span>
+                        </button>
+                    </div>
+
+                    <!-- Adventure 3 -->
+                    <div class="glass-panel-emerald p-6 rounded-2xl border border-emerald-900/50 hover:border-emerald-500/60 transition-all flex flex-col justify-between group">
+                        <div>
+                            <div class="relative h-48 rounded-xl overflow-hidden mb-4 bg-zinc-950">
+                                <img src="img/at-kivalasztott.jpg" alt="A Kiválasztott Munkaidőben Küzd" style="object-position:center 30%" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-sm text-emerald-400 border border-emerald-500/30 text-[10px] font-bold px-2.5 py-1 rounded">
+                                    Kaland #3
+                                </span>
+                            </div>
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest" data-i18n="at.g3">Irodai fantasy-paródia</span>
+                            <h3 class="font-brand text-xl font-bold text-white mt-1 mb-2" data-i18n="at.t3">A Kiválasztott Munkaidőben Küzd</h3>
+                            <p class="text-gray-300 text-xs leading-relaxed mb-4" data-i18n="at.adv3Desc">
+                                Hőseink egy futurisztikus mesterséges intelligencia által vezérelt hálózatban ragadtak. Törd fel a tűzfalat!
+                            </p>
+                        </div>
+                        <button onclick="launchGameDemo('adventower.html')" class="w-full py-2.5 rounded-lg bg-emerald-900/60 hover:bg-emerald-800 text-emerald-200 font-semibold text-xs border border-emerald-500/30 transition-all flex items-center justify-center space-x-1">
+                            <i class="fa-solid fa-play text-emerald-400"></i>
+                            <span data-i18n="at.btnPlay">Demó indítása</span>
+                        </button>
+                    </div>
+
+                    <!-- Adventure 4 -->
+                    <div class="glass-panel-emerald p-6 rounded-2xl border border-emerald-900/50 hover:border-emerald-500/60 transition-all flex flex-col justify-between group">
+                        <div>
+                            <div class="relative h-48 rounded-xl overflow-hidden mb-4 bg-zinc-950">
+                                <img src="img/at-mnemosyne.jpg" alt="Mnemosyne: A Memória-építészet" style="object-position:center 30%" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-sm text-emerald-400 border border-emerald-500/30 text-[10px] font-bold px-2.5 py-1 rounded">
+                                    Kaland #4
+                                </span>
+                            </div>
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest" data-i18n="at.g4">Sci-fi noir</span>
+                            <h3 class="font-brand text-xl font-bold text-white mt-1 mb-2" data-i18n="at.t4">Mnemosyne: A Memória-építészet</h3>
+                            <p class="text-gray-300 text-xs leading-relaxed mb-4" data-i18n="at.adv4Desc">
+                                Irányítsd a saját hajódat a viharos vizeken, köss szövetségeket vagy fosszd ki a császári flottát.
+                            </p>
+                        </div>
+                        <button onclick="launchGameDemo('Mnemosyne.html')" class="w-full py-2.5 rounded-lg bg-emerald-900/60 hover:bg-emerald-800 text-emerald-200 font-semibold text-xs border border-emerald-500/30 transition-all flex items-center justify-center space-x-1">
+                            <i class="fa-solid fa-play text-emerald-400"></i>
+                            <span data-i18n="at.btnPlay">Demó indítása</span>
+                        </button>
+                    </div>
+
+                    <!-- Adventure 5 -->
+                    <div class="glass-panel-emerald p-6 rounded-2xl border border-emerald-900/50 hover:border-emerald-500/60 transition-all flex flex-col justify-between group md:col-span-2 lg:col-span-1">
+                        <div>
+                            <div class="relative h-48 rounded-xl overflow-hidden mb-4 bg-zinc-950">
+                                <img src="img/at-chronos.jpg" alt="Chronos: Parallel Lines" style="object-position:center 30%" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-sm text-emerald-400 border border-emerald-500/30 text-[10px] font-bold px-2.5 py-1 rounded">
+                                    Kaland #5
+                                </span>
+                            </div>
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest" data-i18n="at.g5">Pszichológiai thriller</span>
+                            <h3 class="font-brand text-xl font-bold text-white mt-1 mb-2" data-i18n="at.t5">Chronos: Parallel Lines</h3>
+                            <p class="text-gray-300 text-xs leading-relaxed mb-4" data-i18n="at.adv5Desc">
+                                A sorozat csúcspontja: egyesítsd a négy elem erejét, hogy megmentsd az AdvenTower birodalmát a végső sötétségtől.
+                            </p>
+                        </div>
+                        <button onclick="launchGameDemo('Chronos.html')" class="w-full py-2.5 rounded-lg bg-emerald-900/60 hover:bg-emerald-800 text-emerald-200 font-semibold text-xs border border-emerald-500/30 transition-all flex items-center justify-center space-x-1">
+                            <i class="fa-solid fa-play text-emerald-400"></i>
+                            <span data-i18n="at.btnPlay">Demó indítása</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 4. VISSZAJELZÉS (FEEDBACK) SECTION ==================== -->
+        <section id="sec-feedback" class="page-section hidden py-12">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center mb-10">
+                    <h2 class="font-brand text-3xl font-bold gold-gradient-text mb-3" data-i18n="fb.title">Visszajelzés és hibabejelentés</h2>
+                    <p class="text-gray-300 text-sm max-w-xl mx-auto" data-i18n="fb.sub">Segíts jobbá tenni az AdvenTower játékokat! Küldd el észrevételeidet vagy jelentsd be a hibákat.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Form Column -->
+                    <div class="lg:col-span-2 glass-panel p-6 sm:p-8 rounded-2xl border border-brand-gold/30">
+                        <form id="feedback-form" onsubmit="handleFeedbackSubmit(event)" class="space-y-4">
+                            
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 uppercase mb-1" data-i18n="fb.type">Típus</label>
+                                <select id="fb-type" class="w-full bg-zinc-900 border border-gray-700 rounded-lg px-4 py-2.5 text-sm text-gray-200 focus:outline-none focus:border-brand-gold">
+                                    <option value="bug" data-i18n="fb.typeBug">🐛 Hibabejelentés</option>
+                                    <option value="review" data-i18n="fb.typeReview">⭐ Játékosvélemény</option>
+                                    <option value="idea" data-i18n="fb.typeIdea">💡 Fejlesztési javaslat</option>
+                                </select>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-300 uppercase mb-1" data-i18n="fb.name">Neved / Becenév</label>
+                                    <input type="text" required id="fb-name" placeholder="Gamer123" class="w-full bg-zinc-900 border border-gray-700 rounded-lg px-4 py-2 text-sm text-gray-200 focus:outline-none focus:border-brand-gold">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-300 uppercase mb-1" data-i18n="fb.game">Melyik játék?</label>
+                                    <select id="fb-game" class="w-full bg-zinc-900 border border-gray-700 rounded-lg px-4 py-2 text-sm text-gray-200 focus:outline-none focus:border-brand-gold">
+                                        <option value="nightshift" data-i18n="fb.gNs">Éjjeli műszak (18+)</option>
+                                        <option value="grayhaven" data-i18n="fb.g1">AdventureTime – Grayhaven City</option>
+                                        <option value="rozsdafeny" data-i18n="fb.g2">AdventureTime – Rozsdafény / Rustglow</option>
+                                        <option value="kivalasztott" data-i18n="fb.g3">AdventureTime – A Kiválasztott Munkaidőben Küzd</option>
+                                        <option value="mnemosyne" data-i18n="fb.g4">AdventureTime – Mnemosyne</option>
+                                        <option value="chronos" data-i18n="fb.g5">AdventureTime – Chronos: Parallel Lines</option>
+                                        <option value="portal" data-i18n="fb.gPortal">AdvenTower weboldal</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 uppercase mb-1" data-i18n="fb.replyTo">E-mail címed (nem kötelező, ha választ szeretnél)</label>
+                                <input type="email" id="fb-email" placeholder="nev@domain.hu" class="w-full bg-zinc-900 border border-gray-700 rounded-lg px-4 py-2 text-sm text-gray-200 focus:outline-none focus:border-brand-gold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 uppercase mb-1" data-i18n="fb.msg">Üzenet / Leírás</label>
+                                <textarea id="fb-msg" rows="4" required placeholder="Írd le a tapasztalatodat vagy a hibát részletesen: melyik fejezetben, milyen eszközön történt?" class="w-full bg-zinc-900 border border-gray-700 rounded-lg px-4 py-2 text-sm text-gray-200 focus:outline-none focus:border-brand-gold"></textarea>
+                            </div>
+
+                            <button type="submit" id="fb-send" class="w-full py-3 rounded-lg bg-gradient-to-r from-brand-gold via-amber-600 to-brand-gold text-brand-dark font-bold text-sm hover:brightness-110 transition-all shadow-lg flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span data-i18n="fb.btnSend">Visszajelzés Küldése</span>
+                            </button>
+                        </form>
+
+                        <div id="fb-success-msg" class="hidden mt-4 p-4 rounded-lg bg-emerald-950 border border-emerald-500/50 text-emerald-300 text-sm space-y-3">
+                            <p><i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i><span id="fb-out-note"></span></p>
+                            <pre id="fb-out-text" class="whitespace-pre-wrap bg-black/40 rounded p-3 text-xs text-gray-200 font-mono"></pre>
+                            <div class="flex flex-wrap gap-2">
+                                <button type="button" onclick="copyFeedback()" id="fb-copy-btn" class="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-gray-100 text-xs font-semibold border border-gray-600" data-i18n="fb.copy">Másolás</button>
+                                <a id="fb-mail-btn" href="#" class="hidden px-4 py-2 rounded-lg bg-brand-gold text-brand-dark text-xs font-bold" data-i18n="fb.mail">Küldés e-mailben</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Embedded Google Form & Discord Banner -->
+                    <div class="space-y-6">
+
+                        <!-- Discord Server Coming Soon Card -->
+                        <div class="bg-gradient-to-br from-indigo-950 via-zinc-900 to-indigo-900 p-6 rounded-2xl border border-indigo-500/40 text-center shadow-xl">
+                            <i class="fa-brands fa-discord text-4xl text-indigo-400 mb-3"></i>
+                            <span class="block text-[10px] uppercase font-bold tracking-widest text-indigo-300 bg-indigo-900/60 py-0.5 px-2 rounded-full w-max mx-auto mb-2" data-i18n="fb.discordTag">
+                                Közösség
+                            </span>
+                            <h4 class="font-brand text-lg font-bold text-white mb-2" data-i18n="fb.discordTitle">Discord Szerver Hamarosan!</h4>
+                            <p class="text-xs text-gray-300 mb-4 leading-relaxed" data-i18n="fb.discordDesc">
+                                Csatlakozz hamarosan a hivatalos AdvenTower Discord közösséghez, ahol közvetlenül beszélgethetsz a fejlesztővel és más játékosokkal.
+                            </p>
+                            <button onclick="openDiscord()" class="w-full py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow transition-all">
+                                <i class="fa-solid fa-user-plus mr-1"></i> <span data-i18n="fb.discordBtn">Értesítést Kérek</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 5. FEJLESZTÉSI NAPLÓ (DEVLOG) SECTION ==================== -->
+        <section id="sec-devlog" class="page-section hidden py-12">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="font-brand text-3xl font-bold gold-gradient-text mb-2" data-i18n="dl.title">Fejlesztési Napló & Frissítések</h2>
+                    <p class="text-gray-400 text-sm" data-i18n="dl.sub">Kövesd nyomon a legújabb javításokat és fejlesztési mérföldköveket.</p>
+                </div>
+
+                <!-- Bevezető -->
+                <article data-lang="hu" class="glass-panel rounded-2xl border border-brand-gold/20 p-6 sm:p-10 mb-12 text-gray-300 leading-relaxed space-y-4">
+                <h2 class="font-brand text-2xl sm:text-3xl font-bold gold-gradient-text">Két játék, két világ – egy fejlesztői út</h2>
+                <p>Üdvözöllek a fejlesztési naplóban!</p>
+                <p>Minden játék egy ötlettel kezdődik. Néha egy történettel, néha egy érdekes mechanikával, máskor csak egy gondolattal, amelyből idővel valami sokkal nagyobb lesz.</p>
+                <p>Nálam két ilyen ötletből két különálló projekt született: az Éjjeli műszak és az AdventureTime.</p>
+                <p>Nem egy hagyományos játékfejlesztő stúdió nagy csapata áll a projektek mögött. Ezek a játékok egyéni fejlesztés során, rengeteg tervezéssel, kísérletezéssel, újragondolással és teszteléssel készülnek.</p>
+                <h3 class="font-brand text-xl font-bold text-white pt-4">Éjjeli műszak – Egy történet, ahol a döntéseidnek súlya van</h3>
+                <p>Az Éjjeli műszak egy történetközpontú, interaktív nyomozós kalandként indult.</p>
+                <p>A központi ötlet egy olyan világ megteremtése volt, ahol a játékos nem egyszerűen végigolvassa az eseményeket, hanem maga is részese lesz azoknak. A döntéseknek következményeik vannak, az információk összeállnak, a szereplők pedig nem pusztán nevek a történetben.</p>
+                <p>A fejlesztés során a történet egyre összetettebbé vált. Kialakultak a karakterek, a nyomozási szálak, a különböző döntési lehetőségek és a többféle befejezés.</p>
+                <p>Külön figyelmet kaptak az olyan játékelemek, mint a napló, a karakteradatlapok, a DNS- és ujjlenyomat-vizsgálatok, valamint a játékos által befolyásolható kezelőfelület.</p>
+                <p>A cél végig az volt, hogy a játékos ne csak egy történetet olvasson, hanem valóban úgy érezze, hogy ő irányítja az eseményeket.</p>
+                <h3 class="font-brand text-xl font-bold text-white pt-4">AdventureTime – Öt kaland, öt különleges világ</h3>
+                <p>Az AdventureTime más megközelítésből született.</p>
+                <p>Ahelyett, hogy egyetlen hosszú történetet építettem volna fel, egy olyan gyűjtemény ötlete kezdett körvonalazódni, amelyben minden kaland saját hangulatot, műfajt és világot kap.</p>
+                <p>Az öt történet:</p>
+                <ul class="list-disc pl-6 space-y-1 text-gray-200"><li>Grayhaven City</li><li>Rozsdafény</li><li>A Kiválasztott Munkaidőben Küzd</li><li>Mnemosyne</li><li>Chronos</li></ul>
+                <p>A cél az volt, hogy ne öt, egymásra hasonlító történet készüljön, hanem öt önálló élmény, amelyek más-más oldalról mutatják meg, mire képes egy interaktív kaland.</p>
+                <h3 class="font-brand text-xl font-bold text-white pt-4">A fejlesztés kulisszái mögött</h3>
+                <p>A két projekt készítése során rengeteg apró részlet változott.</p>
+                <p>Egyes ötletek teljesen átalakultak, másokat elvetettem, mert a gyakorlatban nem működtek úgy, ahogyan elképzeltem. A történetek mellett a kezelőfelületek, a játékmenet, a mentési rendszer és a játékosok számára fontos kényelmi funkciók is folyamatosan fejlődtek.</p>
+                <p>A tesztelés legalább olyan fontos része a munkának, mint maga az írás és a fejlesztés. Egy működő játék nemcsak attól jó, hogy elindul: a döntéseknek, a történeti kapcsolatoknak és a különböző útvonalaknak is össze kell állniuk.</p>
+                <h3 class="font-brand text-xl font-bold text-white pt-4">Mi következik?</h3>
+                <p>A jelenlegi cél mindkét projekt továbbfejlesztése, a demók finomítása és a játékosok visszajelzéseinek összegyűjtése.</p>
+                <p>Szeretném, ha ezek a játékok nem egy zárt fejlesztési folyamat végén jelennének meg először, hanem már az út során lehetőséget kapnának az érdeklődők arra, hogy kipróbálják őket és elmondják a véleményüket.</p>
+                <p>Ez a fejlesztési napló ennek az útnak a dokumentálására szolgál.</p>
+                <p>Itt követhetitek majd az új funkciókat, a javításokat, a történetek fejlődését, a tesztelési eredményeket és a következő terveket.</p>
+                <p class="pt-4 font-brand text-lg text-brand-gold italic">A két világ még formálódik. A történet pedig korántsem ért véget.</p>
+                </article>
+                <article data-lang="en" class="glass-panel rounded-2xl border border-brand-gold/20 p-6 sm:p-10 mb-12 text-gray-300 leading-relaxed space-y-4 hidden">
+                <h2 class="font-brand text-2xl sm:text-3xl font-bold gold-gradient-text">Two games, two worlds – one development journey</h2>
+                <p>Welcome to the devlog!</p>
+                <p>Every game starts with an idea. Sometimes a story, sometimes an interesting mechanic, sometimes just a thought that grows into something much bigger over time.</p>
+                <p>For me, two such ideas became two separate projects: Night Shift and AdventureTime.</p>
+                <p>There is no big team of a traditional game studio behind these projects. These games are made by a solo developer, with a lot of planning, experimenting, rethinking and testing.</p>
+                <h3 class="font-brand text-xl font-bold text-white pt-4">Night Shift – A story where your decisions carry weight</h3>
+                <p>Night Shift started out as a story-driven, interactive investigation adventure.</p>
+                <p>The core idea was to create a world where the player does not simply read through the events but becomes part of them. Decisions have consequences, pieces of information come together, and the characters are more than just names in the story.</p>
+                <p>During development the story grew more and more complex. The characters, the investigation threads, the different choices and the multiple endings took shape.</p>
+                <p>Special attention went to game elements such as the journal, the character files, the DNA and fingerprint analyses, and an interface the player can customize.</p>
+                <p>The goal throughout was for the player not just to read a story, but to truly feel in control of what happens.</p>
+                <h3 class="font-brand text-xl font-bold text-white pt-4">AdventureTime – Five adventures, five unique worlds</h3>
+                <p>AdventureTime was born from a different approach.</p>
+                <p>Instead of building one long story, the idea of a collection began to take shape, in which every adventure gets its own mood, genre and world.</p>
+                <p>The five stories:</p>
+                <ul class="list-disc pl-6 space-y-1 text-gray-200"><li>Grayhaven City</li><li>Rustglow</li><li>The Chosen One Fights During Working Hours</li><li>Mnemosyne</li><li>Chronos</li></ul>
+                <p>The goal was not to make five similar stories, but five standalone experiences that each show a different side of what an interactive adventure can do.</p>
+                <h3 class="font-brand text-xl font-bold text-white pt-4">Behind the scenes</h3>
+                <p>Countless small details changed while making the two projects.</p>
+                <p>Some ideas were completely reshaped, others I dropped because in practice they did not work the way I had imagined. Alongside the stories, the interfaces, the gameplay, the save system and the comfort features that matter to players kept evolving too.</p>
+                <p>Testing is at least as important a part of the work as the writing and development itself. A working game is not good just because it starts: the decisions, the story connections and the different paths all have to fit together.</p>
+                <h3 class="font-brand text-xl font-bold text-white pt-4">What comes next?</h3>
+                <p>The current goal is to keep developing both projects, polish the demos and gather feedback from players.</p>
+                <p>I would like these games not to appear for the first time at the end of a closed development process, but to give anyone interested the chance to try them and share their opinion along the way.</p>
+                <p>This devlog is here to document that journey.</p>
+                <p>Here you will be able to follow new features, fixes, how the stories develop, test results and the next plans.</p>
+                <p class="pt-4 font-brand text-lg text-brand-gold italic">The two worlds are still taking shape. And the story is far from over.</p>
+                </article>
+
+                <!-- Timeline Container -->
+                <div class="space-y-8 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:-ml-px before:w-0.5 before:bg-brand-gold/30">
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-brand-gold bg-brand-dark text-brand-gold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-gamepad text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel p-6 rounded-xl border border-brand-gold/20">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-white text-base" data-i18n="dl.t1">Megjelennek a demók</span>
+                                <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2026. 11. 04.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x1">Kipróbálható az Éjjeli műszak első hete, a Kódex első próbájáig, és mind az öt AdventureTime-kaland egy önálló ízelítője. Minden játékból egy gombbal vissza lehet lépni a főoldalra. Várom a visszajelzéseket!</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-zinc-800 text-gray-300 px-2 py-0.5 rounded">Demo</span></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-brand-gold bg-brand-dark text-brand-gold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-shield-halved text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel p-6 rounded-xl border border-brand-gold/20">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-white text-base" data-i18n="dl.t2">Védett kiadás és a portál</span>
+                                <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2026. 11. 03.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x2">Mindkét játék védett, közzétételre szánt verziót kapott, így a forráskódból nem olvasható ki a történet. Teljes tesztkör futott mind a hat játékon, magyarul és angolul, gépen és telefonon. Elindult az AdvenTower weboldal is.</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-zinc-800 text-gray-300 px-2 py-0.5 rounded">Security</span><span class="bg-zinc-800 text-gray-300 px-2 py-0.5 rounded">QA</span><span class="bg-zinc-800 text-gray-300 px-2 py-0.5 rounded">Website</span></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-red-500 bg-brand-dark text-red-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-globe text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel p-6 rounded-xl border border-red-900/30">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-red-300 text-base" data-i18n="dl.t3">Angol kiadás</span>
+                                <span class="text-[10px] bg-red-950 text-red-300 border border-red-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2026. 11.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x3">Elkészült az Éjjeli műszak teljes angol fordítása. A nyelvet már a korhatár-ellenőrző képernyőn ki lehet választani.</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-red-900/40 text-red-300 px-2 py-0.5 rounded">Éjjeli műszak / Night Shift</span><span class="bg-red-900/40 text-red-300 px-2 py-0.5 rounded">English</span></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-red-500 bg-brand-dark text-red-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-pen-nib text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel p-6 rounded-xl border border-red-900/30">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-red-300 text-base" data-i18n="dl.t4">Elkészül az Éjjeli műszak</span>
+                                <span class="text-[10px] bg-red-950 text-red-300 border border-red-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2026. 10.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x4">Nyolc hónap után kész a történet: 126 fejezet egy hónapnyi éjszakán át, 10 különböző befejezéssel. Bekerült a DNS-szál a forgó spirállal, a laboros minijátékok és a 90-es évekbeli terminál-felület négy színtémával.</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-red-900/40 text-red-300 px-2 py-0.5 rounded">Éjjeli műszak / Night Shift</span><span class="bg-red-900/40 text-red-300 px-2 py-0.5 rounded">Release</span></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-brand-gold bg-brand-dark text-brand-gold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-language text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel p-6 rounded-xl border border-brand-gold/20">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-white text-base" data-i18n="dl.t5">Chronos és a közös indítóképernyő</span>
+                                <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2026. 10.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x5">Elkészült a Chronos, és mind az öt kaland egy közös indítóképernyőre került. Mindegyik játszható magyarul és angolul, gépen, tableten és telefonon is.</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-zinc-800 text-gray-300 px-2 py-0.5 rounded">AdventureTime</span><span class="bg-zinc-800 text-gray-300 px-2 py-0.5 rounded">Chronos</span><span class="bg-zinc-800 text-gray-300 px-2 py-0.5 rounded">Release</span></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-emerald-500 bg-brand-dark text-emerald-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-clock-rotate-left text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel-emerald p-6 rounded-xl border border-emerald-900/30">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-emerald-300 text-base" data-i18n="dl.t6">Párhuzamos idősíkok</span>
+                                <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2026. 06.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x6">Megszületett az ötödik kaland, a Chronos ötlete: egy karkötő, amellyel két párhuzamos világ között lehet váltani. Minden váltás az elmédbe kerül, és a megoldáshoz mindkét idősíkra szükség van.</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-emerald-900/40 text-emerald-300 px-2 py-0.5 rounded">Chronos</span></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-brand-gold bg-brand-dark text-brand-gold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-mobile-screen text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel p-6 rounded-xl border border-brand-gold/20">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-white text-base" data-i18n="dl.t7">Nagy átdolgozás</span>
+                                <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2026. 03.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x7">Mind a négy kaland megújult: mobilbarát felületek, egységes mentések és kényelmi funkciók. A cél az volt, hogy telefonon is ugyanolyan jól lehessen játszani, mint gépen.</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-zinc-800 text-gray-300 px-2 py-0.5 rounded">AdventureTime</span><span class="bg-zinc-800 text-gray-300 px-2 py-0.5 rounded">Update</span></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-red-500 bg-brand-dark text-red-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-moon text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel p-6 rounded-xl border border-red-900/30">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-red-300 text-base" data-i18n="dl.t8">Egy sötétebb történet</span>
+                                <span class="text-[10px] bg-red-950 text-red-300 border border-red-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2026. 02.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x8">Megszületett az Éjjeli műszak ötlete: Morgan Hills, 1998, egy laboranalitikus, egy szabálykönyv, amit nem ő írt, és egy belső hang, amely egyre hangosabb. Kezdettől látszott, hogy ez nagyobb lesz bármelyik eddigi kalandnál, ezért önálló játék lett.</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-red-900/40 text-red-300 px-2 py-0.5 rounded">Éjjeli műszak / Night Shift</span><span class="bg-red-900/40 text-red-300 px-2 py-0.5 rounded">Ötlet / Idea</span></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-emerald-500 bg-brand-dark text-emerald-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-infinity text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel-emerald p-6 rounded-xl border border-emerald-900/30">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-emerald-300 text-base" data-i18n="dl.t9">Mnemosyne elkészül</span>
+                                <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2025. 12.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x9">Elkészült a Belső purgatórium és a hat különböző befejezés. A Mnemosyne lett az a kaland, ahol a legkevésbé lehet megbízni a saját emlékeidben.</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-emerald-900/40 text-emerald-300 px-2 py-0.5 rounded">Mnemosyne</span><span class="bg-emerald-900/40 text-emerald-300 px-2 py-0.5 rounded">Release</span></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-emerald-500 bg-brand-dark text-emerald-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-brain text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel-emerald p-6 rounded-xl border border-emerald-900/30">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-emerald-300 text-base" data-i18n="dl.t10">Mnemosyne: emlékek között</span>
+                                <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2025. 09.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x10">Új-Budapest, 2089. A negyedik kaland sci-fi noir lett: egy emlék-restaurátor, aki kómás elmékbe csatlakozva nyomoz egy gyilkosság után. Négy mutató figyeli, mennyire bírja az elméd, és mennyire figyel rád a Cég.</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-emerald-900/40 text-emerald-300 px-2 py-0.5 rounded">Mnemosyne</span></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-emerald-500 bg-brand-dark text-emerald-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-envelopes-bulk text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel-emerald p-6 rounded-xl border border-emerald-900/30">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-emerald-300 text-base" data-i18n="dl.t11">A Kiválasztott elkészül</span>
+                                <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2025. 07.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x11">Elkészült az e-mail-áradat, a kávészünet, az Irattár öt szintje és a sok kis minijáték, köztük a póker és a kódtörés. A végtelen levelek és a körbe vezető folyosók nem hibák, hanem maga a paródia.</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-emerald-900/40 text-emerald-300 px-2 py-0.5 rounded">A Kiválasztott / The Chosen One</span><span class="bg-emerald-900/40 text-emerald-300 px-2 py-0.5 rounded">Release</span></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-emerald-500 bg-brand-dark text-emerald-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-face-grin-squint text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel-emerald p-6 rounded-xl border border-emerald-900/30">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-emerald-300 text-base" data-i18n="dl.t12">Egy kis humor</span>
+                                <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2025. 04.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x12">Két sötét történet után kellett valami könnyedebb. Megszületett A Kiválasztott Munkaidőben Küzd: egy próféciákkal teli fantasy, ahol a legnagyobb ellenség a bürokrácia, a küldetés pedig egy 32/B nyomtatvány eljuttatása.</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-emerald-900/40 text-emerald-300 px-2 py-0.5 rounded">A Kiválasztott / The Chosen One</span></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-emerald-500 bg-brand-dark text-emerald-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-skull text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel-emerald p-6 rounded-xl border border-emerald-900/30">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-emerald-300 text-base" data-i18n="dl.t13">Grayhaven elkészül</span>
+                                <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2025. 02.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x13">Bekerült az automatikus harc, a fertőzés és az Információ, amelyet érdemes a végjátékra tartogatni. Nem minden menekülőút az, aminek látszik: van, amelyik csapda.</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-emerald-900/40 text-emerald-300 px-2 py-0.5 rounded">Grayhaven City</span><span class="bg-emerald-900/40 text-emerald-300 px-2 py-0.5 rounded">Release</span></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-emerald-500 bg-brand-dark text-emerald-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-biohazard text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel-emerald p-6 rounded-xl border border-emerald-900/30">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-emerald-300 text-base" data-i18n="dl.t14">Grayhaven City: indul a túlélőhorror</span>
+                                <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2024. 11.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x14">A második kaland egészen más irányba ment: egy karanténba zárt nagyváros, a K-17-es vírus és egy visszaszámlálás, amely a végső bombázásig tart. Három karakter, három különböző kiindulópont.</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-emerald-900/40 text-emerald-300 px-2 py-0.5 rounded">Grayhaven City</span></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-brand-gold bg-brand-dark text-brand-gold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-layer-group text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel p-6 rounded-xl border border-brand-gold/20">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-white text-base" data-i18n="dl.t15">Egy helyett több kaland</span>
+                                <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2024. 09.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x15">A Rozsdafény után megszületett a nagyobb ötlet: ne egyetlen hosszú történet legyen, hanem önálló kalandok gyűjteménye, mindegyik saját műfajjal, hangulattal és szabályokkal. Így lett az AdventureTime.</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-zinc-800 text-gray-300 px-2 py-0.5 rounded">AdventureTime</span></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-emerald-500 bg-brand-dark text-emerald-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-dice text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel-emerald p-6 rounded-xl border border-emerald-900/30">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-emerald-300 text-base" data-i18n="dl.t16">Az első játszható változat</span>
+                                <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2024. 06.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x16">Elkészült a Rozsdafény első változata: karakteralkotás hat lépésben, kockadobás, harc és a hirtelen, rejtett csapdák. Ez volt az első alkalom, hogy a történetet nem olvasni, hanem játszani lehetett.</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-emerald-900/40 text-emerald-300 px-2 py-0.5 rounded">Rozsdafény / Rustglow</span><span class="bg-emerald-900/40 text-emerald-300 px-2 py-0.5 rounded">Release</span></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-emerald-500 bg-brand-dark text-emerald-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-map text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel-emerald p-6 rounded-xl border border-emerald-900/30">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-emerald-300 text-base" data-i18n="dl.t17">Világépítés</span>
+                                <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2024. 03.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x17">Kialakult Rozsdafény világa: az alváros, amely a tornyok alatt rozsdásodik, a fajok, a szakmák és a háttértörténetek. Ekkor készült el a kockadobásos próbák első terve is, hogy a karakter képességei valóban számítsanak.</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-emerald-900/40 text-emerald-300 px-2 py-0.5 rounded">Rozsdafény / Rustglow</span></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-emerald-500 bg-brand-dark text-emerald-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i class="fa-solid fa-lightbulb text-xs"></i>
+                        </div>
+                        <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] glass-panel-emerald p-6 rounded-xl border border-emerald-900/30">
+                            <div class="flex items-center justify-between space-x-2 mb-1">
+                                <span class="font-bold text-emerald-300 text-base" data-i18n="dl.t18">Egy neonfényes város ötlete</span>
+                                <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded font-mono whitespace-nowrap">2024. 02. 06.</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-3" data-i18n="dl.x18">Itt kezdődött minden. Megszületett a Rozsdafény ötlete: egy futár, egy ötszáz kredites megbízás és egy megacég tornya, ahonnan élve kell kijutni. Ekkor még csak egy jegyzet volt, de már ott volt benne a kérdés, ami az egész történetet hajtja: kiben bízhatsz?</p>
+                            <div class="flex flex-wrap gap-1 text-[10px]"><span class="bg-emerald-900/40 text-emerald-300 px-2 py-0.5 rounded">Ötlet / Idea</span></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 6. KAPCSOLAT (CONTACT) SECTION ==================== -->
+        <section id="sec-contact" class="page-section hidden py-12">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center mb-12">
+                    <h2 class="font-brand text-3xl font-bold gold-gradient-text mb-3" data-i18n="cnt.title">Kapcsolat</h2>
+                    <p class="text-gray-300 text-sm max-w-lg mx-auto" data-i18n="cnt.sub">Kérdésed van, együttműködnél, vagy tesztelőnek jelentkeznél? Írj nekem!</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Contact Info Card -->
+                    <div class="glass-panel p-8 rounded-2xl border border-brand-gold/30 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-brand text-xl font-bold text-white mb-6 border-b border-gray-800 pb-3" data-i18n="cnt.devTitle">Fejlesztői Elérhetőségek</h3>
+                            <div class="space-y-4 text-sm">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center text-brand-gold">
+                                        <i class="fa-solid fa-user-gear"></i>
+                                    </div>
+                                    <div>
+                                        <span class="block text-xs text-gray-400">Studio / Creator</span>
+                                        <span class="font-bold text-gray-200">AdvenTower Games</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center text-brand-gold">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <span class="block text-xs text-gray-400">Email</span>
+                                        <a id="contact-mail" href="mailto:adventower@proton.me" class="font-semibold text-brand-gold hover:underline">adventower@proton.me</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Quick Message -->
+                    <div class="glass-panel p-8 rounded-2xl border border-gray-800">
+                        <h3 class="font-brand text-xl font-bold text-white mb-4" data-i18n="cnt.quickMsgTitle">Gyors Üzenet</h3>
+                        <form id="qm-form" onsubmit="sendQuickMessage(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-400 mb-1" data-i18n="cnt.email">Email címed</label>
+                                <input type="email" id="qm-email" required placeholder="nev@domain.hu" class="w-full bg-zinc-900 border border-gray-700 rounded-lg px-4 py-2 text-sm text-gray-200 focus:outline-none focus:border-brand-gold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-400 mb-1" data-i18n="cnt.subject">Tárgy</label>
+                                <input type="text" id="qm-subject" required placeholder="Megkeresés / Együttműködés" class="w-full bg-zinc-900 border border-gray-700 rounded-lg px-4 py-2 text-sm text-gray-200 focus:outline-none focus:border-brand-gold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-400 mb-1" data-i18n="cnt.message">Üzenet</label>
+                                <textarea rows="3" id="qm-msg" required placeholder="Írd ide az üzenetet..." class="w-full bg-zinc-900 border border-gray-700 rounded-lg px-4 py-2 text-sm text-gray-200 focus:outline-none focus:border-brand-gold"></textarea>
+                            </div>
+                            <button type="submit" id="qm-send" class="w-full py-2.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-white font-semibold text-sm border border-gray-600 transition-all">
+                                <span data-i18n="cnt.btnSend">Küldés</span>
+                            </button>
+                            <p id="qm-status" class="hidden text-sm text-center"></p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-card border-t border-brand-gold/10 py-10 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <span class="font-brand text-xl font-bold gold-gradient-text">AdvenTower</span>
+                <span class="text-xs text-gray-500">| © 2026 All Rights Reserved</span>
+            </div>
+
+            <div class="flex items-center space-x-6 text-sm text-gray-400">
+                <button onclick="navTo('feedback')" class="hover:text-brand-gold text-xs">Visszajelzés</button>
+                <button onclick="navTo('contact')" class="hover:text-brand-gold text-xs">Kapcsolat</button>
+            </div>
+
+            <div class="text-xs text-gray-500 flex items-center space-x-2">
+                <span>Hosted on GitHub Pages</span>
+                <i class="fa-brands fa-github"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC (TRANSLATIONS & SPA NAVIGATION) -->
+    <script>
+        // BILINGUAL DICTIONARY (HU / EN)
+        const translations = {
+            hu: {
+                "nav.home": "Főoldal",
+                "nav.nightshift": "Éjjeli Műszak",
+                "nav.adventuretime": "AdventureTime",
+                "nav.feedback": "Visszajelzés",
+                "nav.devlog": "Fejlesztési Napló",
+                "nav.contact": "Kapcsolat",
+                "home.heroTitle": "Lépj be az interaktív",
+                "home.heroTitleSub": "Világába",
+                "home.heroDesc": "Sötét noir krimi és izgalmas fantasy kalandok egyetlen felületen. Válaszd ki az utadat, és hozd meg saját döntéseidet!",
+                "home.showcaseTitle": "Játékaim",
+                "home.showcaseSub": "Melyik történetbe veted bele magad ma?",
+                "home.cardNightshiftDesc": "Noir kalandkönyv fekete humorral, 1998 októberében, Morgan Hillsben. Nappal laboranalitikus vagy a rendőrségi laborban, éjjel a Kódex szerint dolgozol, a fejedben pedig egyre hangosabb a Házigazda.",
+                "home.cardAdventureDesc": "Öt különálló kaland egy indítóképernyőn: túlélőhorror, cyberpunk, irodai fantasy-paródia, sci-fi noir és időutazós thriller. Mindegyik játszható magyarul és angolul.",
+                "home.tagMature": "Felnőtt Tartalom",
+                "home.btnExplore": "Játék indítása",
+                "home.tagPegi": "5 kaland · HU / EN",
+                "home.btnExplore5": "Kalandok indítása",
+
+                "ns.ageWarnTitle": "KORHATÁR FIGYELMEZTETÉS - FELNŐTT TARTALOM",
+                "ns.ageWarnDesc": "Az Éjjeli Műszak egy sötét hangulatú noir pszichológiai dráma és játékkönyv. Erőszak, bűnügyi témák, feszült morális döntések és felnőtt párbeszédek találhatók benne. Kizárólag 18 éven felüli játékosoknak ajánlott!",
+                "ns.btnConfirmAge": "Elmúltam 18 éves / Lépj be",
+                "ns.genre": "Pszichológiai Noir / Interaktív Könyv",
+                "ns.longDesc": "Morgan Hills, 1998 október. Nappal laboranalitikus vagy a rendőrségi laborban, éjjel pedig a Kódex szerint dolgozol: azokra vadászol, akiket a bíróság elengedett. A labor épp most vezeti be a DNS-adatbázist, Ostrander nyomozó egyre közelebb jár az igazsághoz, a belső hang pedig, a Házigazda, egyre hangosabb.",
+                "ns.featuresTitle": "Főbb Jellemzők:",
+                "ns.feat1": "Sötét, száraz 90-es évekbeli noir hangulat",
+                "ns.feat2": "A Kódex öt szabálya",
+                "ns.feat3": "Négy képesség: Szakértelem, Megfigyelés, Meggyőzés, Hidegvér",
+                "ns.feat4": "126 fejezet és 10 különböző befejezés",
+                "ns.galleryTitle": "Hangulatképek:",
+                "ns.demoTitle": "Játssz a Demóval azonnal!",
+                "ns.demoSub": "Az első hét játszható: a labor, a Kódex és az első nagy döntés.",
+                "ns.btnPlayDemo": "Demó Indítása",
+                "ns.specTitle": "Játék Adatok",
+                "ns.developer": "Fejlesztő:",
+                "ns.platform": "Platform:",
+                "ns.languages": "Nyelvek:",
+                "ns.rating": "Besorolás:",
+                "ns.status": "Státusz:",
+
+                "at.headerDesc": "Öt különálló kaland, egy indítóképernyő. Mindegyik önálló történet saját szabályokkal, és mindegyik játszható magyarul és angolul is. A demóban mind az öt kalandból kipróbálható egy ízelítő.",
+                "at.adv1Desc": "Grayhaven egy káoszba fulladt nagyváros, ahol elszabadult a halálos K-17-es vírus. A hadsereg végső szőnyegbombázásra készül, a túlélőknek versenyt kell futniuk az idővel.",
+                "at.adv2Desc": "Neonfényes cyberpunk nagyváros. Futárként egy ötszáz kredites megbízást kapsz: lopd el az AX-9 adatmagot az Arkhein Dynamics tornyából, és juss ki élve. De kiben bízhatsz?",
+                "at.adv3Desc": "A próféciák szerint te vagy a Kiválasztott, a küldetésed pedig eljuttatni a 32/B nyomtatványt a Fekete Toronyba. Küzdj meg a bürokrácia szörnyeivel, és vigyázz, hogy ki ne égj!",
+                "at.adv4Desc": "Új-Budapest, 2089. Emlék-restaurátor vagy: kómás elmékbe csatlakozva göngyölítesz fel egy gyilkosságot. De a Mnemosyne Corp emlékeket ír át, és te magad is a kísérleteik alanya vagy.",
+                "at.adv5Desc": "Dr. Adam Baker egy laborrobbanás után ébred a romok között, a csuklóján egy karkötővel, amellyel párhuzamos idősíkok között válthat. Minden váltás az elméjébe kerül.",
+                "at.btnPlay": "Demó indítása",
+
+                "fb.title": "Visszajelzés és hibabejelentés",
+                "fb.sub": "Segíts jobbá tenni az AdvenTower játékokat! Küldd el észrevételeidet vagy jelentsd be a hibákat.",
+                "fb.type": "Típus",
+                "fb.typeBug": "🐛 Hibabejelentés",
+                "fb.typeReview": "⭐ Játékosvélemény",
+                "fb.typeIdea": "💡 Fejlesztési javaslat",
+                "fb.name": "Neved / Becenév",
+                "fb.game": "Melyik játék?",
+                "fb.msg": "Üzenet / Leírás",
+                "fb.btnSend": "Visszajelzés küldése",
+                "fb.discordTag": "Közösség",
+                "fb.discordTitle": "Discord Szerver Hamarosan!",
+                "fb.discordDesc": "Csatlakozz hamarosan a hivatalos AdvenTower Discord közösséghez, ahol közvetlenül beszélgethetsz a fejlesztővel és más játékosokkal.",
+                "fb.discordBtn": "Értesítést Kérek",
+
+                "dl.title": "Fejlesztési Napló & Frissítések",
+                "dl.sub": "Kövesd nyomon a legújabb javításokat és fejlesztési mérföldköveket.",
+                "dl.log1": "Elkészültek a demók. Éjjeli Műszak: az első hét játszható, a Kódex első próbájáig. AdventureTime: mind az öt kalandból kipróbálható egy önálló ízelítő. A demók mentései külön tárolódnak.",
+                "dl.log2": "Elkészült a teljes angol fordítás, és a nyelvválasztás már a korhatár-ellenőrző képernyőn elérhető.",
+                "dl.log3": "A Chronos: Parallel Lines ötödik kalandként felkerült az indítóképernyőre, angol változattal együtt. A Mnemosyne angol változata is elérhető.",
+
+                "cnt.title": "Kapcsolat",
+                "cnt.sub": "Kérdésed van, együttműködnél, vagy tesztelőnek jelentkeznél? Írj nekem!",
+                "cnt.devTitle": "Fejlesztői Elérhetőségek",
+                "cnt.quickMsgTitle": "Gyors Üzenet",
+                "cnt.email": "Email címed",
+                "cnt.subject": "Tárgy",
+                "cnt.message": "Üzenet",
+                "cnt.btnSend": "Küldés",
+                "home.demoTag": "Demó elérhető",
+                "ns.statusVal": "Demó elérhető",
+                "ns.codexTitle": "A Kódex szabályai",
+                "ns.rule1": "I. Csak bizonyított bűnös, akit a hatóságok elengedtek.",
+                "ns.rule2": "II. Soha a szeretteid körében.",
+                "ns.rule3": "III. Soha ugyanaz a módszer kétszer.",
+                "ns.rule4": "IV. A hétköznapi élet előbbre való.",
+                "ns.rule5": "V. Ha kétséged van, hagyd.",
+                "at.title": "AdventureTime Gyűjtemény",
+                "at.g1": "Túlélőhorror",
+                "at.g2": "Cyberpunk",
+                "at.g3": "Irodai fantasy-paródia",
+                "at.g4": "Sci-fi noir",
+                "at.g5": "Pszichológiai thriller",
+                "at.t1": "Grayhaven City",
+                "at.t2": "Rozsdafény",
+                "at.t3": "A Kiválasztott Munkaidőben Küzd",
+                "at.t4": "Mnemosyne: A Memória-építészet",
+                "at.t5": "Chronos: Parallel Lines",
+                "fb.copy": "Másolás",
+                "fb.copied": "Kimásolva",
+                "fb.mail": "Küldés e-mailben",
+                "fb.outNote": "Az üzeneted elkészült. Másold ki, vagy küldd el e-mailben.",
+                "fb.outNoteNoMail": "Az üzeneted elkészült. A közvetlen beküldés még nincs beállítva, ezért másold ki, és küldd el a Kapcsolat oldalon található elérhetőségre.",
+                "dl.h1": "Megjelentek a demók",
+                "dl.h2": "Éjjeli Műszak: angol kiadás",
+                "dl.h3": "AdventureTime: megérkezett a Chronos",
+                "soon": "Hamarosan elérhető.",
+                "fb.gNs": "Éjjeli műszak (18+)",
+                "fb.g1": "AdventureTime – Grayhaven City",
+                "fb.g2": "AdventureTime – Rozsdafény",
+                "fb.g3": "AdventureTime – A Kiválasztott Munkaidőben Küzd",
+                "fb.g4": "AdventureTime – Mnemosyne",
+                "fb.g5": "AdventureTime – Chronos: Parallel Lines",
+                "fb.gPortal": "AdvenTower weboldal",
+                "fb.replyTo": "E-mail címed (nem kötelező, ha választ szeretnél)",
+                "fb.sending": "Küldés…",
+                "fb.sent": "Köszönöm! A visszajelzésed megérkezett.",
+                "fb.failed": "Most nem sikerült elküldeni. Az alábbi gombbal elküldheted e-mailben, vagy másold ki a szöveget.",
+                "cnt.sent": "Köszönöm, az üzeneted megérkezett!",
+                "cnt.failed": "Most nem sikerült elküldeni. Írj közvetlenül az adventower@proton.me címre.",
+                "dl.t1": "Megjelennek a demók",
+                "dl.x1": "Kipróbálható az Éjjeli műszak első hete, a Kódex első próbájáig, és mind az öt AdventureTime-kaland egy önálló ízelítője. Minden játékból egy gombbal vissza lehet lépni a főoldalra. Várom a visszajelzéseket!",
+                "dl.t2": "Védett kiadás és a portál",
+                "dl.x2": "Mindkét játék védett, közzétételre szánt verziót kapott, így a forráskódból nem olvasható ki a történet. Teljes tesztkör futott mind a hat játékon, magyarul és angolul, gépen és telefonon. Elindult az AdvenTower weboldal is.",
+                "dl.t3": "Angol kiadás",
+                "dl.x3": "Elkészült az Éjjeli műszak teljes angol fordítása. A nyelvet már a korhatár-ellenőrző képernyőn ki lehet választani.",
+                "dl.t4": "Elkészül az Éjjeli műszak",
+                "dl.x4": "Nyolc hónap után kész a történet: 126 fejezet egy hónapnyi éjszakán át, 10 különböző befejezéssel. Bekerült a DNS-szál a forgó spirállal, a laboros minijátékok és a 90-es évekbeli terminál-felület négy színtémával.",
+                "dl.t5": "Chronos és a közös indítóképernyő",
+                "dl.x5": "Elkészült a Chronos, és mind az öt kaland egy közös indítóképernyőre került. Mindegyik játszható magyarul és angolul, gépen, tableten és telefonon is.",
+                "dl.t6": "Párhuzamos idősíkok",
+                "dl.x6": "Megszületett az ötödik kaland, a Chronos ötlete: egy karkötő, amellyel két párhuzamos világ között lehet váltani. Minden váltás az elmédbe kerül, és a megoldáshoz mindkét idősíkra szükség van.",
+                "dl.t7": "Nagy átdolgozás",
+                "dl.x7": "Mind a négy kaland megújult: mobilbarát felületek, egységes mentések és kényelmi funkciók. A cél az volt, hogy telefonon is ugyanolyan jól lehessen játszani, mint gépen.",
+                "dl.t8": "Egy sötétebb történet",
+                "dl.x8": "Megszületett az Éjjeli műszak ötlete: Morgan Hills, 1998, egy laboranalitikus, egy szabálykönyv, amit nem ő írt, és egy belső hang, amely egyre hangosabb. Kezdettől látszott, hogy ez nagyobb lesz bármelyik eddigi kalandnál, ezért önálló játék lett.",
+                "dl.t9": "Mnemosyne elkészül",
+                "dl.x9": "Elkészült a Belső purgatórium és a hat különböző befejezés. A Mnemosyne lett az a kaland, ahol a legkevésbé lehet megbízni a saját emlékeidben.",
+                "dl.t10": "Mnemosyne: emlékek között",
+                "dl.x10": "Új-Budapest, 2089. A negyedik kaland sci-fi noir lett: egy emlék-restaurátor, aki kómás elmékbe csatlakozva nyomoz egy gyilkosság után. Négy mutató figyeli, mennyire bírja az elméd, és mennyire figyel rád a Cég.",
+                "dl.t11": "A Kiválasztott elkészül",
+                "dl.x11": "Elkészült az e-mail-áradat, a kávészünet, az Irattár öt szintje és a sok kis minijáték, köztük a póker és a kódtörés. A végtelen levelek és a körbe vezető folyosók nem hibák, hanem maga a paródia.",
+                "dl.t12": "Egy kis humor",
+                "dl.x12": "Két sötét történet után kellett valami könnyedebb. Megszületett A Kiválasztott Munkaidőben Küzd: egy próféciákkal teli fantasy, ahol a legnagyobb ellenség a bürokrácia, a küldetés pedig egy 32/B nyomtatvány eljuttatása.",
+                "dl.t13": "Grayhaven elkészül",
+                "dl.x13": "Bekerült az automatikus harc, a fertőzés és az Információ, amelyet érdemes a végjátékra tartogatni. Nem minden menekülőút az, aminek látszik: van, amelyik csapda.",
+                "dl.t14": "Grayhaven City: indul a túlélőhorror",
+                "dl.x14": "A második kaland egészen más irányba ment: egy karanténba zárt nagyváros, a K-17-es vírus és egy visszaszámlálás, amely a végső bombázásig tart. Három karakter, három különböző kiindulópont.",
+                "dl.t15": "Egy helyett több kaland",
+                "dl.x15": "A Rozsdafény után megszületett a nagyobb ötlet: ne egyetlen hosszú történet legyen, hanem önálló kalandok gyűjteménye, mindegyik saját műfajjal, hangulattal és szabályokkal. Így lett az AdventureTime.",
+                "dl.t16": "Az első játszható változat",
+                "dl.x16": "Elkészült a Rozsdafény első változata: karakteralkotás hat lépésben, kockadobás, harc és a hirtelen, rejtett csapdák. Ez volt az első alkalom, hogy a történetet nem olvasni, hanem játszani lehetett.",
+                "dl.t17": "Világépítés",
+                "dl.x17": "Kialakult Rozsdafény világa: az alváros, amely a tornyok alatt rozsdásodik, a fajok, a szakmák és a háttértörténetek. Ekkor készült el a kockadobásos próbák első terve is, hogy a karakter képességei valóban számítsanak.",
+                "dl.t18": "Egy neonfényes város ötlete",
+                "dl.x18": "Itt kezdődött minden. Megszületett a Rozsdafény ötlete: egy futár, egy ötszáz kredites megbízás és egy megacég tornya, ahonnan élve kell kijutni. Ekkor még csak egy jegyzet volt, de már ott volt benne a kérdés, ami az egész történetet hajtja: kiben bízhatsz?"
+            },
+            en: {
+                "nav.home": "Home",
+                "nav.nightshift": "Night Shift",
+                "nav.adventuretime": "AdventureTime",
+                "nav.feedback": "Feedback",
+                "nav.devlog": "Devlog",
+                "nav.contact": "Contact",
+                "home.heroTitle": "Enter the World of",
+                "home.heroTitleSub": "Interactive Fiction",
+                "home.heroDesc": "Dark noir crime and exciting fantasy adventures in one portal. Choose your path and make your own decisions!",
+                "home.showcaseTitle": "My Games",
+                "home.showcaseSub": "Which story will you dive into today?",
+                "home.cardNightshiftDesc": "A noir gamebook with black humor, set in Morgan Hills in October 1998. By day you are a lab analyst at the police lab; by night you work according to the Codex, while the voice in your head, the Host, grows louder.",
+                "home.cardAdventureDesc": "Five standalone adventures on one launch screen: survival horror, cyberpunk, office fantasy parody, sci-fi noir and a time-shifting thriller. All playable in English and Hungarian.",
+                "home.tagMature": "Mature Content",
+                "home.btnExplore": "Play now",
+                "home.tagPegi": "5 adventures · EN / HU",
+                "home.btnExplore5": "Play the adventures",
+
+                "ns.ageWarnTitle": "AGE WARNING - MATURE CONTENT (18+)",
+                "ns.ageWarnDesc": "Night Shift is a dark noir psychological drama and gamebook containing crime themes, violence, moral dilemmas, and mature dialogue. Strictly for players aged 18 and older!",
+                "ns.btnConfirmAge": "I am 18 or older / Enter",
+                "ns.genre": "Psychological Noir / Interactive Fiction",
+                "ns.longDesc": "Morgan Hills, October 1998. By day you are a lab analyst at the police lab; by night you work according to the Codex, hunting those the court let go. The lab is just rolling out its DNA database, Detective Ostrander is getting closer to the truth, and the voice inside you, the Host, is getting louder.",
+                "ns.featuresTitle": "Key Features:",
+                "ns.feat1": "Gritty, authentic 90s noir atmosphere",
+                "ns.feat2": "The five rules of the Codex",
+                "ns.feat3": "Four skills: Expertise, Observation, Persuasion, Composure",
+                "ns.feat4": "126 chapters and 10 different endings",
+                "ns.galleryTitle": "Mood visuals:",
+                "ns.demoTitle": "Play the Demo Now!",
+                "ns.demoSub": "The first week is playable: the lab, the Codex and the first big decision.",
+                "ns.btnPlayDemo": "Launch Demo",
+                "ns.specTitle": "Game Specs",
+                "ns.developer": "Developer:",
+                "ns.platform": "Platform:",
+                "ns.languages": "Languages:",
+                "ns.rating": "Rating:",
+                "ns.status": "Status:",
+
+                "at.headerDesc": "Five adventures, one launch screen. Each is a standalone story with its own rules, and each is playable in English and Hungarian. The demo includes a taster of all five.",
+                "at.adv1Desc": "Grayhaven is a city drowning in chaos, where the deadly K-17 virus has broken loose. The army is preparing a final carpet bombing, and the survivors race against time.",
+                "at.adv2Desc": "A neon-lit cyberpunk city. As a courier, you take a 500-credit job: steal the AX-9 data core from the Arkhein Dynamics tower and get out alive. But who can you trust?",
+                "at.adv3Desc": "The prophecies say you are the Chosen One, and your quest is to deliver Form 32/B to the Black Tower. Fight the monsters of bureaucracy and try not to burn out!",
+                "at.adv4Desc": "New Budapest, 2089. You are a memory restorer, entering comatose minds to solve a murder. But Mnemosyne Corp rewrites memories, and you are one of their test subjects.",
+                "at.adv5Desc": "Dr. Adam Baker wakes among the ruins of a lab explosion, a bracelet on his wrist that lets him shift between parallel timelines. Every shift costs him a piece of his mind.",
+                "at.btnPlay": "Play the demo",
+
+                "fb.title": "Feedback and bug reports",
+                "fb.sub": "Help us improve AdvenTower games! Submit your feedback or report bugs.",
+                "fb.type": "Type",
+                "fb.typeBug": "🐛 Bug report",
+                "fb.typeReview": "⭐ Player review",
+                "fb.typeIdea": "💡 Suggestion",
+                "fb.name": "Your name / nickname",
+                "fb.game": "Which game?",
+                "fb.msg": "Message / Details",
+                "fb.btnSend": "Send feedback",
+                "fb.discordTag": "Community",
+                "fb.discordTitle": "Discord Server Coming Soon!",
+                "fb.discordDesc": "Join the official AdvenTower Discord community soon to chat directly with the developer and fellow players.",
+                "fb.discordBtn": "Notify Me",
+
+                "dl.title": "Development Log & Updates",
+                "dl.sub": "Track our latest patches, bugfixes, and development milestones.",
+                "dl.log1": "The demos are out. Night Shift: the first week is playable, up to the first test of the Codex. AdventureTime: a standalone taster of all five adventures. Demo saves are stored separately.",
+                "dl.log2": "The full English translation is done, and language choice is now available on the age-check screen.",
+                "dl.log3": "Chronos: Parallel Lines joins the launch screen as the fifth adventure, English version included. Mnemosyne is now available in English.",
+
+                "cnt.title": "Contact",
+                "cnt.sub": "Have a question, want to collaborate, or volunteer as a tester? Write to me!",
+                "cnt.devTitle": "Developer Contact",
+                "cnt.quickMsgTitle": "Quick Message",
+                "cnt.email": "Your Email",
+                "cnt.subject": "Subject",
+                "cnt.message": "Message",
+                "cnt.btnSend": "Send Message",
+                "home.demoTag": "Demo available",
+                "ns.statusVal": "Demo available",
+                "ns.codexTitle": "The Codex rules",
+                "ns.rule1": "I. Only the proven guilty whom the authorities let go.",
+                "ns.rule2": "II. Never among the people you love.",
+                "ns.rule3": "III. Never the same method twice.",
+                "ns.rule4": "IV. Everyday life comes first.",
+                "ns.rule5": "V. When in doubt, leave it.",
+                "at.title": "AdventureTime Collection",
+                "at.g1": "Survival horror",
+                "at.g2": "Cyberpunk",
+                "at.g3": "Office fantasy parody",
+                "at.g4": "Sci-fi noir",
+                "at.g5": "Psychological thriller",
+                "at.t1": "Grayhaven City",
+                "at.t2": "Rustglow",
+                "at.t3": "The Chosen One Fights During Working Hours",
+                "at.t4": "Mnemosyne: The Memory Architect",
+                "at.t5": "Chronos: Parallel Lines",
+                "fb.copy": "Copy",
+                "fb.copied": "Copied",
+                "fb.mail": "Send by email",
+                "fb.outNote": "Your message is ready. Copy it, or send it by email.",
+                "fb.outNoteNoMail": "Your message is ready. Direct submission is not set up yet, so copy it and send it to the address on the Contact page.",
+                "dl.h1": "The demos are out",
+                "dl.h2": "Night Shift: English release",
+                "dl.h3": "AdventureTime: Chronos arrives",
+                "soon": "Coming soon.",
+                "fb.gNs": "Night Shift (18+)",
+                "fb.g1": "AdventureTime – Grayhaven City",
+                "fb.g2": "AdventureTime – Rustglow",
+                "fb.g3": "AdventureTime – The Chosen One Fights During Working Hours",
+                "fb.g4": "AdventureTime – Mnemosyne",
+                "fb.g5": "AdventureTime – Chronos: Parallel Lines",
+                "fb.gPortal": "AdvenTower website",
+                "fb.replyTo": "Your email (optional, if you'd like a reply)",
+                "fb.sending": "Sending…",
+                "fb.sent": "Thank you! Your feedback has arrived.",
+                "fb.failed": "It couldn't be sent right now. Use the button below to send it by email, or copy the text.",
+                "cnt.sent": "Thank you, your message has arrived!",
+                "cnt.failed": "It couldn't be sent right now. Please write directly to adventower@proton.me.",
+                "dl.t1": "The demos are out",
+                "dl.x1": "The first week of Night Shift, up to the first test of the Codex, and a standalone taster of all five AdventureTime adventures are now playable. Every game has a button that takes you back to the main page. Feedback is welcome!",
+                "dl.t2": "Protected builds and the portal",
+                "dl.x2": "Both games got protected release builds, so the story cannot be read from the source code. A full test pass ran on all six games, in English and Hungarian, on desktop and phone. The AdvenTower website launched too.",
+                "dl.t3": "English release",
+                "dl.x3": "The full English translation of Night Shift is done. The language can now be chosen right on the age-check screen.",
+                "dl.t4": "Night Shift is written",
+                "dl.x4": "After eight months the story is complete: 126 chapters across a month of nights, with 10 different endings. The DNA storyline with its rotating helix, the lab mini-games and a 90s terminal interface with four color themes were added.",
+                "dl.t5": "Chronos and the shared launch screen",
+                "dl.x5": "Chronos was finished, and all five adventures moved to one shared launch screen. Each one is playable in English and Hungarian, on desktop, tablet and phone.",
+                "dl.t6": "Parallel timelines",
+                "dl.x6": "The idea of the fifth adventure, Chronos, was born: a bracelet that lets you shift between two parallel worlds. Every shift costs you a piece of your mind, and solving the mystery takes both timelines.",
+                "dl.t7": "A big overhaul",
+                "dl.x7": "All four adventures were reworked: mobile-friendly interfaces, consistent saving and comfort features. The goal was to make them just as good to play on a phone as on a computer.",
+                "dl.t8": "A darker story",
+                "dl.x8": "The idea of Night Shift was born: Morgan Hills, 1998, a lab analyst, a rulebook he did not write and an inner voice that keeps getting louder. From the start it was clear this would be bigger than any adventure so far, so it became a standalone game.",
+                "dl.t9": "Mnemosyne is finished",
+                "dl.x9": "The Inner Purgatory and six different endings were finished. Mnemosyne became the adventure where you can least trust your own memories.",
+                "dl.t10": "Mnemosyne: among memories",
+                "dl.x10": "New Budapest, 2089. The fourth adventure became sci-fi noir: a memory restorer investigating a murder by connecting to comatose minds. Four meters track how much your mind can take and how closely the Company is watching you.",
+                "dl.t11": "The Chosen One is finished",
+                "dl.x11": "The email flood, the coffee break, the five levels of the Archives and many small mini-games, including poker and code-breaking, were finished. The endless emails and the looping corridors are not bugs: they are the parody itself.",
+                "dl.t12": "A bit of humor",
+                "dl.x12": "After two dark stories, something lighter was needed. The Chosen One Fights During Working Hours was born: a prophecy-filled fantasy where the greatest enemy is bureaucracy and the quest is delivering Form 32/B.",
+                "dl.t13": "Grayhaven is finished",
+                "dl.x13": "Automatic combat, infection and Intel were added, and Intel is worth saving for the endgame. Not every escape route is what it seems: some are traps.",
+                "dl.t14": "Grayhaven City: the survival horror begins",
+                "dl.x14": "The second adventure went in a completely different direction: a quarantined city, the K-17 virus and a countdown to the final bombing. Three characters, three different starting points.",
+                "dl.t15": "Many adventures instead of one",
+                "dl.x15": "After Rustglow came the bigger idea: not one long story, but a collection of standalone adventures, each with its own genre, mood and rules. That is how AdventureTime was born.",
+                "dl.t16": "The first playable version",
+                "dl.x16": "The first version of Rustglow was finished: character creation in six steps, dice rolls, combat and sudden hidden traps. It was the first time the story could be played rather than read.",
+                "dl.t17": "Worldbuilding",
+                "dl.x17": "The world of Rustglow took shape: the underworld rusting beneath the towers, the species, the professions and the backgrounds. The first design of the dice checks was made too, so that the character’s abilities would really matter.",
+                "dl.t18": "The idea of a neon-lit city",
+                "dl.x18": "This is where it all began. The idea of Rustglow was born: a courier, a 500-credit job and a megacorp tower you have to get out of alive. At this point it was only a note, but it already held the question that drives the whole story: who can you trust?"
+            }
+        };
+
+        let currentLang = 'hu';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            try { localStorage.setItem('advt.lang', lang); } catch (e) {}
+            document.documentElement.lang = lang;
+            const btnHu = document.getElementById('lang-hu-btn');
+            const btnEn = document.getElementById('lang-en-btn');
+
+            if (lang === 'hu') {
+                btnHu.className = 'px-3 py-1 rounded-full text-xs font-bold transition-all bg-brand-gold text-brand-dark shadow';
+                btnEn.className = 'px-3 py-1 rounded-full text-xs font-bold text-gray-400 hover:text-white transition-all';
+            } else {
+                btnEn.className = 'px-3 py-1 rounded-full text-xs font-bold transition-all bg-brand-gold text-brand-dark shadow';
+                btnHu.className = 'px-3 py-1 rounded-full text-xs font-bold text-gray-400 hover:text-white transition-all';
+            }
+
+            document.querySelectorAll('[data-lang]').forEach(el => el.classList.toggle('hidden', el.dataset.lang !== lang));
+            // Update all DOM elements with data-i18n attributes
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+        }
+
+        // NAVIGATION SWITCHER (SPA logic)
+        function navTo(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.page-section').forEach(sec => {
+                sec.classList.add('hidden');
+            });
+
+            // Show targeted section
+            const target = document.getElementById('sec-' + sectionId);
+            if (target) {
+                target.classList.remove('hidden');
+                try { history.replaceState(null, '', '#' + sectionId); } catch (e) {}
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            // Update navigation highlights
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('text-brand-gold', 'font-semibold');
+                link.classList.add('text-gray-300');
+            });
+
+            const activeLink = document.getElementById('nav-' + sectionId);
+            if (activeLink) {
+                activeLink.classList.remove('text-gray-300');
+                activeLink.classList.add('text-brand-gold', 'font-semibold');
+            }
+        }
+
+        // MOBILE MENU TOGGLE
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // AGE CONFIRMATION LOGIC
+        function confirmAge() {
+            const btn = document.getElementById('age-confirm-btn');
+            btn.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>Megerősítve / Confirmed</span>`;
+            btn.className = "w-full md:w-auto px-6 py-3 rounded-lg bg-emerald-600 text-white font-bold text-sm shadow-lg pointer-events-none";
+        }
+
+        // ===== BEÁLLÍTÁSOK: ezeket írd át a sajátjaidra =====
+        const CONFIG = {
+            demoEjjeli: 'Ejjeli-muszak_Demo.html',
+            demoAdventure: 'AdventureTime_Demo.html',
+            email: 'adventower@proton.me',
+            // Az űrlapok a FormSubmit szolgáltatáson keresztül küldenek e-mailt erre a címre.
+            sendUrl: 'https://formsubmit.co/ajax/adventower@proton.me',
+            discord: ''                       // Discord meghívó linkje
+        };
+        const tr = k => (translations[currentLang] && translations[currentLang][k]) || translations.hu[k] || '';
+
+        // ÜZENET KÜLDÉSE (FormSubmit → e-mail)
+        async function postMail(subject, fields) {
+            const r = await fetch(CONFIG.sendUrl, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(Object.assign({ _subject: subject, _template: 'table', _captcha: 'false' }, fields)) });
+            const j = await r.json().catch(() => ({}));
+            if (!r.ok || String(j.success) !== 'true') throw new Error('send failed');
+        }
+
+        // VISSZAJELZÉS
+        async function handleFeedbackSubmit(event) {
+            event.preventDefault();
+            const g = id => document.getElementById(id);
+            const type = g('fb-type').selectedOptions[0].text, game = g('fb-game').selectedOptions[0].text;
+            const name = g('fb-name').value.trim(), email = g('fb-email').value.trim(), msg = g('fb-msg').value.trim();
+            const text = '[' + type + '] ' + game + '\n' + (currentLang === 'hu' ? 'Név: ' : 'Name: ') + name + (email ? '\nE-mail: ' + email : '') + '\n\n' + msg;
+            const btn = g('fb-send'), lbl = btn.querySelector('span');
+            btn.disabled = true; lbl.textContent = tr('fb.sending');
+            const box = g('fb-success-msg'), mail = g('fb-mail-btn'), pre = g('fb-out-text'), copyBtn = g('fb-copy-btn');
+            try {
+                const f = { 'Típus': type, 'Játék': game, 'Név': name, 'Üzenet': msg, 'Nyelv': currentLang };
+                if (email) { f['E-mail'] = email; f._replyto = email; }
+                await postMail('AdvenTower visszajelzés: ' + type + ' – ' + game, f);
+                g('fb-out-note').textContent = tr('fb.sent');
+                pre.classList.add('hidden'); copyBtn.classList.add('hidden'); mail.classList.add('hidden');
+                box.className = box.className.replace('bg-red-950', 'bg-emerald-950');
+                g('feedback-form').reset();
+            } catch (e) {
+                g('fb-out-note').textContent = tr('fb.failed');
+                pre.textContent = text; pre.classList.remove('hidden'); copyBtn.classList.remove('hidden');
+                mail.href = 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent('AdvenTower visszajelzés') + '&body=' + encodeURIComponent(text);
+                mail.classList.remove('hidden');
+            }
+            box.classList.remove('hidden');
+            btn.disabled = false; lbl.textContent = tr('fb.btnSend');
+        }
+        function copyFeedback() {
+            const b = document.getElementById('fb-copy-btn');
+            try { navigator.clipboard.writeText(document.getElementById('fb-out-text').textContent).then(() => { b.textContent = tr('fb.copied'); }, () => {}); } catch (e) {}
+        }
+        // GYORS ÜZENET (Kapcsolat)
+        async function sendQuickMessage(event) {
+            event.preventDefault();
+            const g = id => document.getElementById(id).value.trim(), st = document.getElementById('qm-status'), btn = document.getElementById('qm-send');
+            btn.disabled = true;
+            try {
+                await postMail('AdvenTower üzenet: ' + g('qm-subject'), { 'E-mail': g('qm-email'), _replyto: g('qm-email'), 'Tárgy': g('qm-subject'), 'Üzenet': g('qm-msg') });
+                st.textContent = tr('cnt.sent'); st.className = 'text-sm text-center text-emerald-400'; document.getElementById('qm-form').reset();
+            } catch (e) { st.textContent = tr('cnt.failed'); st.className = 'text-sm text-center text-red-400'; }
+            btn.disabled = false;
+        }
+        function openDiscord() {
+            if (CONFIG.discord) window.open(CONFIG.discord, '_blank');
+            else { const b = event.currentTarget; b.querySelector('span').textContent = tr('soon'); }
+        }
+
+        // DEMÓK INDÍTÁSA
+        function launchGameDemo(which) {
+            if (which === 'ejjeli') location.href = CONFIG.demoEjjeli;
+            else location.href = CONFIG.demoAdventure + (which && which !== 'all' ? '#' + which : '');
+        }
+
+        window.addEventListener('hashchange', () => { const h = location.hash.slice(1); if (['home','nightshift','adventuretime','feedback','devlog','contact'].includes(h)) navTo(h); });
+        document.addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && e.target.getAttribute && e.target.getAttribute('role') === 'button' && e.target.onclick) { e.preventDefault(); e.target.onclick(); } });
+        // INITIALIZE ON LOAD
+        window.onload = function() {
+            let l = 'hu';
+            try { const s = localStorage.getItem('advt.lang'); if (s === 'hu' || s === 'en') l = s; else if (!(navigator.language || 'hu').startsWith('hu')) l = 'en'; } catch (e) {}
+            setLanguage(l);
+            const sec = location.hash.slice(1);
+            navTo(['home','nightshift','adventuretime','feedback','devlog','contact'].includes(sec) ? sec : 'home');
+            const cm = document.getElementById('contact-mail');
+            if (CONFIG.email) { cm.href = 'mailto:' + CONFIG.email; cm.textContent = CONFIG.email; } else { cm.removeAttribute('href'); cm.textContent = tr('soon'); }
+        };
+    </script>
+</body>
+</html>
